@@ -10,14 +10,15 @@ img {
   display: flex;
   justify-content: center;
 }
+h2 {
+  color: #ea8a45;
+}
 p {
   display: flex;
   justify-content: right;
+  text-align: right;
 }
-h1 {
-  display: flex;
-  justify-content: right;
-}
+
 ul {
   display: flex;
   list-style-type: none;

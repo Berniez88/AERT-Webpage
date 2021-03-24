@@ -4,15 +4,19 @@ body {
     rgba(3, 210, 255, 0.78) 0%,
     rgba(19, 29, 39, 0.27) 100%
   ); */
-  background-color: rgb(176, 176, 236);
+  background: rgba(37, 55, 75, 0.9);
 }
 img {
   display: flex;
   justify-content: center;
 }
+p {
+  display: flex;
+  justify-content: right;
+}
 h1 {
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 ul {
   display: flex;
@@ -28,5 +32,4 @@ li {
 a {
   display: block;
   padding: 8px;
-  background-color: #dddddd;
 }

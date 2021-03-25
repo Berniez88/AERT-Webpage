@@ -1,0 +1,11 @@
+body{
+    background: rgba(69, 174, 234, 0.3);
+}
+.nav {
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    background: #4A6A8F;
+}

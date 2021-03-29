@@ -7,8 +7,14 @@ body {
   background: rgba(37, 55, 75, 0.9);
 }
 img {
-  display: flex;
-  justify-content: center;
+  left: 80px;
+}
+.wlogo {
+  position: relative;
+  left: 75%;
+}
+button {
+  background-color: #3d94c4;
 }
 h2 {
   color: #ea8a45;

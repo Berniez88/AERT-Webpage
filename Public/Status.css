@@ -9,3 +9,7 @@ body {
 .navbar-start {
   background-color: #3d94c4;
 }
+.navbar-menu a.navbar-item:hover {
+  background-color: #ea8a45;
+  color: white;
+}

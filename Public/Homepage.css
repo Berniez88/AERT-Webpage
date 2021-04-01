@@ -1,9 +1,9 @@
-body {
+/*body {
   /* background: radial-gradient(
     40.86% 50% at 50% 50%,
     rgba(3, 210, 255, 0.78) 0%,
     rgba(19, 29, 39, 0.27) 100%
-  ); */
+  ); 
   background: rgba(37, 55, 75, 0.9);
 }
 img {
@@ -39,4 +39,14 @@ li {
 a {
   display: block;
   padding: 8px;
+}
+*/
+.navbar {
+  background-color: #4a6a8f;
+}
+.navbar-item {
+  color: white;
+}
+.navbar-start {
+  background-color: #3d94c4;
 }

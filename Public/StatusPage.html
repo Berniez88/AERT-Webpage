@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Status.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="Status.css" />
     <title>Document</title>
-</head>
-<body>
-    <div class="navigation">
-        <ul>
-            <li><a href="Homepage.html">Home</a></li>
-            <li><a href="StatusPage.html">Status</a></li>
-            <li><a href="QueryPage.html">Query</a></li>
-            <li><a href="About.html">About</a></li>
-            <img src="CISESS_W 1.png" alt="Nav Logo">
-        </ul>
-    </div>
-    <div id='content_one'>
-        <div id='layers_bar'>
-            <label class="checkbox">
-                <input type="checkbox">
-                BASEMAP
-            </label>
-            <label class="checkbox1">
-                <input type="checkbox">
-                ABI
-            </label>
-            <label class="checkbox2">
-                <input type="checkbox">
-                GLM
-            </label>
-           <!-- finish the dropdown check box for glm -->
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="Homepage.html"> Home </a>
+          <a class="navbar-item" href="StatusPage.html">Status</a>
+          <a class="navbar-item" href="QueryPage.html">Query</a>
+          <a class="navbar-item" href="About.html">About</a>
         </div>
-        <div id='instrument_status'>
 
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <img class="wlogo" src="CISESS_W 1.png" alt="Nav Logo" />
+          </div>
         </div>
+      </div>
+    </nav>
+    <div id="content_one">
+      <div id="layers_bar">
+        <label class="checkbox">
+          <input type="checkbox" />
+          BASEMAP
+        </label>
+        <label class="checkbox1">
+          <input type="checkbox" />
+          ABI
+        </label>
+        <label class="checkbox2">
+          <input type="checkbox" />
+          GLM
+        </label>
+        <!-- finish the dropdown check box for glm -->
+      </div>
+      <div id="instrument_status"></div>
     </div>
-    <div id='content_two'>
-        <div id='parameter_bar'>
-
-        </div>
-        <div id='glm_stat'>
-
-        </div>
+    <div id="content_two">
+      <div id="parameter_bar"></div>
+      <div id="glm_stat"></div>
     </div>
-</body>
+  </body>
 </html>

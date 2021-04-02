@@ -29,21 +29,41 @@
       </div>
     </nav>
     <div id="content_one">
-      <div id="layers_bar">
-        <label class="checkbox">
-          <input type="checkbox" />
-          BASEMAP
-        </label>
-        <label class="checkbox1">
-          <input type="checkbox" />
-          ABI
-        </label>
-        <label class="checkbox2">
-          <input type="checkbox" />
-          GLM
-        </label>
-        <!-- finish the dropdown check box for glm -->
-      </div>
+        <aside class="menu">
+            <p class="menu-label">
+              Layers
+            </p>
+
+            <ul class="menu-list">
+              <li><label class="checkbox">
+                <input type="checkbox" />
+                BASEMAP
+              </label></li>
+
+              <li><label class="checkbox1">
+                <input type="checkbox" />
+                ABI
+              </label></li>
+
+            </ul>
+            <ul class="menu-list">
+              <li>
+                <label class="checkbox1">
+                    <input type="checkbox" />
+                    GLM
+                  </label>
+                <ul>
+                  <li><a>FED</a></li>
+                  <li><a>TOE</a></li>
+                  <li><a>AFA</a></li>
+                </ul>
+              </li>
+            </ul>
+        </aside>
+        <div id="statusMap">
+
+        </div>
+    </div>
       <div id="instrument_status"></div>
     </div>
     <div id="content_two">
@@ -52,3 +72,6 @@
     </div>
   </body>
 </html>
+
+
+

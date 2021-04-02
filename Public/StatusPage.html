@@ -62,16 +62,15 @@
             </ul>
         </aside>
       </div>
-        <div id="statusMap">
-          <div id="map"></div>
-
-            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-            <!-- need to actually complete the src link for the api -->
-            <script
-              
-              src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-              async
-            ></script>
+        <div class="statusMap-holder">
+          <div class="map-holder">
+            <div class="le">
+              <div class="mapouter">
+                <iframe width="600" height="500" id="gmp_canvas" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       
     </div>

@@ -25,7 +25,6 @@ html {
   background: #25374b;
   border-radius: 3px;
 }
-<<<<<<< HEAD
 .menu-list, .menu-label, .checkbox1 {
   color: white;
 }
@@ -49,12 +48,3 @@ html {
 #content_one {
 	width:1100px;margin:0px auto;
 }
-=======
-.menu-list,
-.menu-label {
-  color: white;
-}
-.subcategory {
-  color: white;
-}
->>>>>>> 71cb95f88885cce4e09823dd4179978b99ff4c91

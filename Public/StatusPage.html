@@ -29,6 +29,7 @@
       </div>
     </nav>
     <div id="content_one">
+      <div class='box'>
         <aside class="menu">
             <p class="menu-label">
               Layers
@@ -60,9 +61,19 @@
               </li>
             </ul>
         </aside>
+      </div>
         <div id="statusMap">
+          <div id="map"></div>
 
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <!-- need to actually complete the src link for the api -->
+            <script
+              
+              src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+              async
+            ></script>
         </div>
+      
     </div>
       <div id="instrument_status"></div>
     </div>

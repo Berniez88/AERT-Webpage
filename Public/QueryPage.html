@@ -29,27 +29,18 @@
       </div>
     </nav>
 
-    <!DOCTYPE html>
-    <html>
-      <body onload="setDateAndHour()">
-        <div class="bg-image"></div>
-        <!-- Assigns all variables  -->
-        <?php
-$latmin = $latmax = $lonmin = $lonmax = $startday = $endday = $starthour = $endhour = $email = "";
-?>
-<title>Simple Map</title>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<!-- jsFiddle will insert css and js -->
-</head>
-<body>
-<div id="map"></div>
+    <!-- MAP API -->
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
 
-<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-  async
-></script>
-</body>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+
         <!-- Sets up the form where the user will input all values -->
         <table class="bigtable">
           <tr>
@@ -204,15 +195,6 @@ $latmin = $latmax = $lonmin = $lonmax = $startday = $endday = $starthour = $endh
             </td>
           </tr>
         </table>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="./js/script.js"></script>
-        <script src="./js/backup.js"></script>
-        <script
-          async
-          defer
-          src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBrCL0OoLs8Ry9TK48811rGyx4TOiF56R0&callback=initMap"
-        ></script>
-      </body>
     </html>
   </body>
 </html>

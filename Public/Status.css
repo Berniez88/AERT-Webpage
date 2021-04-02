@@ -1,5 +1,9 @@
 body {
 }
+html {
+  background: rgba(37, 55, 75, 0.9);
+}
+
 .navbar {
   background-color: #4a6a8f;
 }
@@ -18,9 +22,13 @@ body {
   height: 398px;
   left: 68px;
   top: 216px;
-  background: #25374B;
+  background: #25374b;
   border-radius: 3px;
 }
-.menu-list, .menu-label {
+.menu-list,
+.menu-label {
+  color: white;
+}
+.subcategory {
   color: white;
 }

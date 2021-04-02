@@ -1,6 +1,10 @@
 body {
   background: rgba(69, 174, 234, 0.3);
 }
+html {
+  background: rgba(37, 55, 75, 0.9);
+}
+
 img {
   display: flex;
   justify-content: center;

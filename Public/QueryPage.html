@@ -28,5 +28,191 @@
         </div>
       </div>
     </nav>
+
+    <!DOCTYPE html>
+    <html>
+      <body onload="setDateAndHour()">
+        <div class="bg-image"></div>
+        <!-- Assigns all variables  -->
+        <?php
+$latmin = $latmax = $lonmin = $lonmax = $startday = $endday = $starthour = $endhour = $email = "";
+?>
+<title>Simple Map</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<!-- jsFiddle will insert css and js -->
+</head>
+<body>
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+  async
+></script>
+</body>
+        <!-- Sets up the form where the user will input all values -->
+        <table class="bigtable">
+          <tr>
+            <td>
+              <table class="table">
+                <form id="main" method="post">
+                  <tr>
+                    <th>
+                      <h2>Minimum Longitude</h2>
+                      <input
+                        type="text"
+                        name="latmin"
+                        id="latmin"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                    <th>
+                      <h2>Minimum Latitude</h2>
+                      <input
+                        type="text"
+                        name="latmax"
+                        id="latmax"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h2>Maximum Longitude</h2>
+                      <input
+                        type="text"
+                        name="lonmin"
+                        id="lonmin"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                    <th>
+                      <h2>Maximum Latitude</h2>
+                      <input
+                        type="text"
+                        name="lonmax"
+                        id="lonmax"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h2>Start Hour</h2>
+                      <input
+                        type="number"
+                        min="0"
+                        max="24"
+                        name="starthour"
+                        id="shour"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                    <th>
+                      <h2>End Hour</h2>
+                      <input
+                        type="number"
+                        min="0"
+                        max="24"
+                        name="endhour"
+                        id="ehour"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h2>Satellite:</h2>
+                    </td>
+                    <th>
+                      <input
+                        type="radio"
+                        id="g16"
+                        name="satellite"
+                        value="16"
+                        checked
+                      />
+                      <label for="g16">GOES-16</label><br />
+                      <input
+                        type="radio"
+                        id="g17"
+                        name="satellite"
+                        value="17"
+                      />
+                      <label for="g17">GOES-17</label><br />
+                    </th>
+                  </tr>
+                  <th colspan="2">
+                    <h2>Date</h2>
+                    <input
+                      type="date"
+                      name="startday"
+                      id="startday"
+                      style="font-size: 14px"
+                    />
+                  </th>
+                  <tr>
+                    <th colspan="2">
+                      <h2>Email<br /></h2>
+                      <div class="tooltip">
+                        <i class="fa fa-info-circle"></i>
+                        <span class="tooltiptext"
+                          >Enter in the latitude/longitude boundaries or select
+                          a region using the map, then choose the date and
+                          begin/end UTC hour, enter your email, and click
+                          submit. You will recieve an inital email acknowledging
+                          your request followed some time later by a summary
+                          image and link to a directory providing the GLM flash
+                          data in comma-delimited format.
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        style="font-size: 14px"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="submit"
+                        class="button"
+                        value="Submit"
+                        id="submit"
+                        name="submit"
+                      />
+                      <br />
+                    </td>
+                    <td>
+                      <input
+                        type="reset"
+                        class="button"
+                        value="Reset"
+                        id="reset"
+                        name="reset"
+                        onclick="setDateAndHour()"
+                      />
+                    </td>
+                  </tr>
+                </form>
+              </table>
+            </td>
+            <td>
+              <div id="map"></div>
+            </td>
+          </tr>
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/backup.js"></script>
+        <script
+          async
+          defer
+          src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBrCL0OoLs8Ry9TK48811rGyx4TOiF56R0&callback=initMap"
+        ></script>
+      </body>
+    </html>
   </body>
 </html>

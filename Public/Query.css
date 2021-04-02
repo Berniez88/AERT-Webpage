@@ -1,3 +1,7 @@
+html {
+  background: rgba(37, 55, 75, 0.9);
+}
+
 /* Navigation bar and the styling please dont edit */
 .navbar {
   background-color: #4a6a8f;
@@ -8,144 +12,31 @@
 .navbar-start {
   background-color: #3d94c4;
 }
-.navbar-menu a.navbar-item:hover {
-  background-color: #ea8a45;
-  color: white;
-}
 .table {
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  float: inherit;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: relative;
-  margin-top: 110px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  /* width: 30%;
-  padding: 20px; */
   text-align: center;
+  border: 2px solid;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
 }
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
+h1 {
+  /* font-family: Georgia, sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px; */
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
+  width: 418px;
+  height: 74px;
+  left: 511px;
+  top: 120px;
 
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.bigtable {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 400px;
-}
-/* Style the header with a grey background and some padding */
-.header {
-  width: 100%;
-  position: fixed;
-  overflow: visible;
-  background: rgb(0, 0, 0);
-  /* Fallback for older browsers without RGBA-support */
-  background: rgba(0, 0, 0, 0.5);
-  padding: 3px 0;
-  z-index: 2;
-}
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
 
-.header h1 {
-  margin-top: 40px;
-  border: none;
-}
-
-/* Float the link section to the right */
-.nav {
-  float: right;
-  margin-top: 15px;
-  margin-right: 10px;
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav {
-    float: none;
-  }
-}
-
-.button {
-  background-color: #555555;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button:hover {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 18px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: transparent;
-  font-family: inherit;
-  cursor: pointer;
-  /* Important for vertical align on mobile phones */
-  margin: 0;
-  /* Important for vertical align on mobile phones */
-}
-#map {
-  height: 400px;
-  /* The height is 400 pixels */
-  width: 100%;
-  /* The width is the width of the web page */
+  color: #ffffff;
 }

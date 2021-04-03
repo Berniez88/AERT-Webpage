@@ -20,23 +20,11 @@ html {
   margin-top: 100px;
 }
 h1 {
-  /* font-family: Georgia, sans-serif;
-  font-size: 5em;
-  letter-spacing: -2px; */
-  position: absolute;
-  width: 418px;
-  height: 74px;
-  left: 511px;
-  top: 120px;
-
+  display: flex;
+  justify-content: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
-  line-height: 75px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
   color: #ffffff;
 }

@@ -1,7 +1,43 @@
 html {
   background: rgba(37, 55, 75, 0.9);
 }
+/* Everything inside the table has a white color font */
+.table tbody {
+  background-color: rgb(85, 102, 128);
+  color: white;
+  border-color: inherit;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+  color: white;
+}
+.table th:not([align]) {
+  text-align: inherit;
+  color: white;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 /* Navigation bar and the styling please dont edit */
 .navbar {
   background-color: #4a6a8f;
@@ -27,4 +63,11 @@ h1 {
   font-weight: bold;
   font-size: 64px;
   color: #ffffff;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }

@@ -8,7 +8,38 @@ html {
   border-color: inherit;
 }
 
-h1,
+/* .table {
+  text-align: center;
+  border: 2px solid;
+  width: 20%;
+  margin: auto;
+  margin-top: 100px;
+  float: left;
+  width: 50px;
+} */
+
+.block:not(:last-child),
+.box:not(:last-child),
+.breadcrumb:not(:last-child),
+.content:not(:last-child),
+.highlight:not(:last-child),
+.level:not(:last-child),
+.message:not(:last-child),
+.notification:not(:last-child),
+.pagination:not(:last-child),
+.progress:not(:last-child),
+.subtitle:not(:last-child),
+.table-container:not(:last-child),
+.table:not(:last-child),
+.tabs:not(:last-child),
+.title:not(:last-child) {
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+  width: 300px;
+  height: 650px;
+}
+
+h1 h1,
 h2,
 h3,
 h4,
@@ -65,24 +96,7 @@ h1 {
   color: #ffffff;
 }
 
-#map {
+/* #map {
   height: 400px;
-  /* The height is 400 pixels */
   width: 100%;
-  /* The width is the width of the web page */
-}
-
-.footer {
-  margin-top: 100%;
-  background-color: #0E1316;
-  display: flex;
-  justify-content: center;
-  padding: 0mm;
-}
-
-.wlogo {
-  display: flex;
-  justify-content: center;
-  height: 20px;
-  
-}
+} */

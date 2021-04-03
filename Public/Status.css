@@ -4,6 +4,15 @@ body {
 html {
   background: rgba(37, 55, 75, 0.9);
 }
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  color: #ffffff;
+}
 
 .navbar {
   background-color: #4a6a8f;

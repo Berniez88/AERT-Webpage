@@ -50,6 +50,7 @@ h1 {
   height: 700px;
   margin: 0 auto;
   background-color: #234A61;
+  
 }
 
 .leftbox1 {
@@ -57,19 +58,21 @@ h1 {
   width: 30%;
   margin-right: 2%;
   background-color: #4a6a8f;
-  position: relative;
+  /* position: relative; */
   max-width: 313px;
   padding: 30px;
   margin-left: 50px;
-  margin-top: 3px;
+  margin-top: 33px;
 }
 
 .mapout {
-  /* position: absolute; */
-  /* width: 1000px; */
+  position: absolute;
   margin-left: 400px;
   margin-top: 33px;
-  
+}
+
+.gmap_canvas {
+  justify-content: center;
 }
 
 
@@ -89,6 +92,21 @@ h1 {
   padding: 30px;
   margin-left: 50px;
   margin-top: 33px;
+}
+
+.footer {
+  margin-top: 100%;
+  background-color: #0E1316;
+  display: flex;
+  justify-content: center;
+  padding: 0mm;
+}
+
+.wlogo {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  
 }
 
 /* .energy-checkbox, .area-checkbox, .errors-checkbox, .housek-checkbox {

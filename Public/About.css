@@ -90,17 +90,17 @@ h1 {
 }
 
 .footer {
-  margin-top: 100%;
-  background-color: #0E1316;
+  background-color: #0e1316;
   display: flex;
   justify-content: center;
   padding: 0mm;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 
 .wlogo {
   display: flex;
   justify-content: center;
   height: 20px;
-  
 }
-

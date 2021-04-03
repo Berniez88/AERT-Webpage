@@ -13,7 +13,39 @@ h1 {
   font-size: 64px;
   color: #ffffff;
 }
+/* .title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  display: flex;
+  justify-content: left;
+  color: #ea8a45;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+}
 
+.container {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+} */
+
+.title.is-3 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: left;
+  color: #ea8a45;
+}
+
+.text {
+  align-items: center;
+}
 img {
   display: flex;
   justify-content: center;
@@ -22,19 +54,10 @@ h2 {
   color: #ea8a45;
 }
 p {
-  display: flex;
-  justify-content: right;
-  text-align: right;
+  color: white;
+  width: 600px;
 }
 
-ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #4a6a8f;
-}
 li {
   float: left;
 }

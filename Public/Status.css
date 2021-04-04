@@ -94,6 +94,7 @@ li {
   border-style: solid;
   border-color: rgba(19, 29, 39, 0.27);
   border-right-color: #3D94C4;
+  color: white;
 }
 
 #map {

@@ -65,14 +65,21 @@ a {
   display: block;
   padding: 8px;
 }
-h1 {
-  font-size: 64px;
-  line-height: 75px;
+.header {
   display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.03em;
+  justify-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
   color: #ffffff;
+  width: 100%;
+  letter-spacing: 0.03em;
+  background: radial-gradient(
+    40.86% 50% at 50% 50%,
+    rgba(3, 210, 255, 0.58) 0%,
+    rgba(19, 29, 39, 0.27) 100%
+  );
 }
 
 .navbar {

@@ -100,3 +100,18 @@ h1 {
   height: 400px;
   width: 100%;
 } */
+.footer {
+  background-color: #0e1316;
+  display: flex;
+  justify-content: center;
+  padding: 0mm;
+  /* position: absolute; */
+  bottom: 0px;
+  width: 100%;
+}
+
+.wlogo {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}

@@ -19,7 +19,7 @@ html {
 } */
 
 
-.block:not(:last-child),
+/* .block:not(:last-child),
 .box:not(:last-child),
 .breadcrumb:not(:last-child),
 .content:not(:last-child),
@@ -35,10 +35,10 @@ html {
 .tabs:not(:last-child),
 .title:not(:last-child) {
   margin-bottom: 1.5rem;
-  /* margin-left: 15%; */
+  margin-left: 15%;
   width: 300px;
   height: 650px;
-}
+} */
 .header {
   display: flex;
   justify-content: center;
@@ -79,7 +79,7 @@ html {
   margin-top: 100px;
   flex-wrap: wrap;
   justify-content: center;
-  /* margin-right: 20px; */
+  margin-right: auto;
 }
 
 h1 h1,
@@ -125,10 +125,11 @@ h6 {
 .table {
   text-align: center;
   border: 2px solid;
-  width: 50%;
-  /* margin: auto; */
+  width: 300px;
+  height: 650px;
+  margin-left: auto;
   margin-top: 100px;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
 }
 h1 {

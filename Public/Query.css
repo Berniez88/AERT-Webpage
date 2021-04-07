@@ -59,6 +59,10 @@ html {
   justify-content: center;
   height: 30px;
   color: #EA8A45;
+  font-size: 100%;
+  font-weight: 400;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #wrap {

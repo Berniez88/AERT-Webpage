@@ -1,20 +1,22 @@
 body {
   /* background: rgba(37, 55, 75, 0.9); */
-  background-color: #234A61;
+  background-color: #234a61;
 }
 
 .header {
   display: flex;
   justify-content: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: bold;
   font-size: 64px;
   color: #ffffff;
   width: 100%;
   letter-spacing: 0.03em;
-  background: radial-gradient(40.86% 50% at 50% 50%, rgba(3, 210, 255, 0.58) 
-  0%, rgba(19, 29, 39, 0.27) 100%);
+  background: radial-gradient(
+    40.86% 50% at 50% 50%,
+    rgba(3, 210, 255, 0.58) 0%,
+    rgba(19, 29, 39, 0.27) 100%
+  );
 }
 
 /* h1 {
@@ -47,10 +49,10 @@ body {
   left: 68px;
   top: 216px;
   border-radius: 3px;
-  
 }
 
-.menu-list, .menu-label {
+.menu-list,
+.menu-label {
   color: white;
   /* position:absolute; */
   font-weight: 500;
@@ -65,10 +67,9 @@ body {
   display: flex;
   width: 100%;
   height: 50px;
-  background-color: #234A61;
-  
+  background-color: #234a61;
 }
-.pagebuttons a{
+.pagebuttons a {
   width: 230px;
   border-style: solid;
   background-color: #3d94c4;
@@ -78,14 +79,13 @@ body {
 }
 
 #wrap {
-	/* width:1100px; */
+  /* width:1100px; */
   width: 100%;
   height: 700px;
   margin: 0 auto;
-  background-color: #234A61;
+  background-color: #234a61;
   display: flex;
   justify-content: center;
-  
 }
 
 .leftbox1 {
@@ -96,16 +96,15 @@ body {
   margin-top: 33px;
   justify-content: center;
   margin-bottom: auto;
-  
 }
 li {
-  background-color: #3D94C4;
+  background-color: #3d94c4;
   padding-left: 5mm;
   font-size: 6mm;
   letter-spacing: 1mm;
   border-style: solid;
   border-color: rgba(19, 29, 39, 0.27);
-  border-right-color: #3D94C4;
+  border-right-color: #3d94c4;
   color: white;
 }
 
@@ -130,14 +129,13 @@ li {
   width: 100%;
 }
 
-
 .instrument_status {
   width: 100%;
   height: 700px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  background-color: #131D27;;
+  background-color: #131d27;
 }
 
 .leftbox2 {
@@ -214,7 +212,6 @@ li {
 #le {
 	width:600px;height:500px;padding: 0;text-align: center;margin: 0px auto;
 } */
-
 
 /* .box2 {
   position: absolute;

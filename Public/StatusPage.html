@@ -9,6 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="Status.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -35,7 +39,7 @@
       <h1>GLM Instrument Status</h1>
     </div>
     <div class="glm-nav bar">
-    <!-- end of webpage header class -->
+      <!-- end of webpage header class -->
     </div>
     <!-- start of first portion contents -->
     <div class="pagebuttons">
@@ -50,32 +54,26 @@
       <!-- start of layer checkbox section using bulma -->
       <div class="leftbox1">
         <div class="menu-label">
-          <p> Layer</p>
+          <p>Layer</p>
         </div>
         <ul>
           <li>
-            <input type="checkbox" name="option1" value="basemap"> BASEMAP
+            <input type="checkbox" name="option1" value="basemap" /> BASEMAP
           </li>
+          <li><input type="checkbox" name="option2" value="ABI" /> ABI</li>
           <li>
-            <input type="checkbox" name="option2" value="ABI"> ABI
-          </li>
-          <li>
-            <input type="checkbox" id="option3"><label for="option3"> GLM</label>
+            <input type="checkbox" id="option3" /><label for="option3">
+              GLM</label
+            >
             <ul>
               <li>
-                <label>
-                  <input type="checkbox" class="subOption"> FED
-                </label>
+                <label> <input type="checkbox" class="subOption" /> FED </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" class="subOption"> TOE
-                </label>
+                <label> <input type="checkbox" class="subOption" /> TOE </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" class="subOption"> AFA
-                </label>
+                <label> <input type="checkbox" class="subOption" /> AFA </label>
               </li>
             </ul>
             <!-- link resorce for sub-checkbox: https://codepen.io/heksus/pen/QvJZMm -->
@@ -359,15 +357,20 @@
               // https://developers.google.com/maps/documentation/javascript/examples/style-array
            }
 
-           var map = new google.maps.Map(document.getElementById('map'), options);
-          }
-        </script>
-    
-        <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
-          iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly">
-        </script>
-        <!-- resorce for adding in map: https://www.youtube.com/watch?v=Zxf1mnP5zcw -->
+          var map = new google.maps.Map(
+            document.getElementById("map"),
+            options
+          );
+        }
+      </script>
+
+      <script
+        async
+        defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
+          iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
+      ></script>
+      <!-- resorce for adding in map: https://www.youtube.com/watch?v=Zxf1mnP5zcw -->
       <!-- <div class="mapout">
         <div class="map-holder">
           
@@ -395,28 +398,24 @@
         </div>
         <ul>
           <li>
-            <input type="checkbox" name="option1" value="energy"> Energy
+            <input type="checkbox" name="option1" value="energy" /> Energy
+          </li>
+          <li><input type="checkbox" name="option2" value="area" /> Area</li>
+          <li>
+            <input type="checkbox" name="option3" value="errors" /> Errors
           </li>
           <li>
-            <input type="checkbox" name="option2" value="area"> Area
-          </li>
-          <li>
-            <input type="checkbox" name="option3" value="errors"> Errors
-          </li>
-          <li>
-            <input type="checkbox" name="option4" value="housekeep"> House Keeping
+            <input type="checkbox" name="option4" value="housekeep" /> House
+            Keeping
           </li>
         </ul>
       </div>
       <div class="time-series-box">
-        <table id="datatable">
-          
-        </table>
+        <table id="datatable"></table>
       </div>
     </div>
     <footer class="footer">
       <img class="wlogo" src="CISESS_W 1.png" alt="Nav Logo" />
-
     </footer>
   </body>
 </html>

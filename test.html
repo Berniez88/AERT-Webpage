@@ -1,44 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Add Map</title>
-
-    <style type="text/css">
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;
-        /* The height is 400 pixels */
-        width: 100%;
-        /* The width is the width of the web page */
-      }
-    </style>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="teststyle.css" />
+    <title>Document</title>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <div class="wrapper">
+      <table class="newtable">
+        <form class="newform">
+          <tbody>
+            <tr>
+              <th>
+                <h2>Minimum Longitude</h2>
+                <input type="text" />
+              </th>
+              <th>
+                <h2>Minimum Latitude</h2>
+                <input type="text" />
+              </th>
+            </tr>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
+            <tr>
+              <th>
+                <h2>Maximum Longitude</h2>
+                <input type="text" />
+              </th>
+              <th>
+                <h2>Maximum Latitude</h2>
+                <input type="text" />
+              </th>
+            </tr>
+
+            <tr>
+              <th>
+                <h2>Start hour</h2>
+                <input
+                  type="number"
+                  min="0"
+                  max="24"
+                  name="starthour"
+                  id="shour"
+                  style="font-size: 14px"
+                />
+              </th>
+              <th>
+                <h2>End hour</h2>
+                <input
+                  type="number"
+                  min="0"
+                  max="24"
+                  name="endhour"
+                  id="ehour"
+                  style="font-size: 14px"
+                />
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <h2>Satellite:</h2>
+              </td>
+              <th>
+                <input
+                  type="radio"
+                  id="g16"
+                  name="satellite"
+                  value="16"
+                  checked
+                />
+                <label for="g16">GOES-16</label><br />
+                <input type="radio" id="g17" name="satellite" value="17" />
+                <label for="g17">GOES-17</label><br />
+              </th>
+            </tr>
+
+            <th colspan="2">
+              <h2>Date</h2>
+              <input
+                type="date"
+                name="startday"
+                id="startday"
+                style="font-size: 14px"
+              />
+            </th>
+            <tr>
+              <th colspan="2">
+                <h2>Email<br /></h2>
+                <div class="tooltip">
+                  <i class="fa fa-info-circle"></i>
+                  <span class="tooltiptext"
+                    >Enter in the latitude/longitude boundaries or select a
+                    region using the map, then choose the date and begin/end UTC
+                    hour, enter your email, and click submit. You will recieve
+                    an inital email acknowledging your request followed some
+                    time later by a summary image and link to a directory
+                    providing the GLM flash data in comma-delimited
+                    format.</span
+                  >
+                </div>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  style="font-size: 14px"
+                />
+              </th>
+            </tr>
+            <tr class="bbutton">
+              <td>
+                <input
+                  type="submit"
+                  class="button"
+                  value="Submit"
+                  id="submit"
+                  name="submit"
+                />
+                <br />
+              </td>
+              <td>
+                <input
+                  type="reset"
+                  class="button"
+                  value="Reset"
+                  id="reset"
+                  name="reset"
+                  onclick="setDateAndHour()"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </form>
+      </table>
+    </div>
   </body>
 </html>

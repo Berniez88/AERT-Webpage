@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>GLM Status Page</title>
   </head>
   <body>
     <!-- Beginning of nav bar code -->
@@ -41,7 +41,8 @@
     <div class="glm-nav bar">
       <!-- end of webpage header class -->
     </div>
-    <!-- start of first portion contents -->
+
+    <!-- Place holder for the future buttons at the top -->
     <div class="pagebuttons">
       <a href="button1">Button 1</a>
       <a href="button2">Button 2</a>
@@ -50,8 +51,21 @@
       <a href="button5">Button 5</a>
       <a href="button6">Button 6</a>
     </div>
+    <!-- end of firts set of page buttons -->
+
+    <!-- Satilite buttons for map -->
+    <div id="satcontainer">
+      <div class="emptyplaceholder"></div>
+    <div class="sat">
+      <button type="button" style="width:50%">GOES-17</button>
+      <button type="button" style="width:50%">GOES-16</button>
+    </div>
+    </div>
+    <!-- end of map satilite buttons -->
+
+    <!-- Wrapper that conatins all of the elements for the map and check boxes -->
     <div id="wrap">
-      <!-- start of layer checkbox section using bulma -->
+      <!-- Layer checkbox html -->
       <div class="leftbox1">
         <div class="menu-label">
           <p>Layer</p>
@@ -73,14 +87,15 @@
                 <label> <input type="checkbox" class="subOption" /> TOE </label>
               </li>
               <li>
-                <label> <input type="checkbox" class="subOption" /> AFA </label>
+                <label> <input type="checkbox" class="subOption" /> MFA </label>
               </li>
             </ul>
             <!-- link resorce for sub-checkbox: https://codepen.io/heksus/pen/QvJZMm -->
           </li>
         </ul>
       </div>
-      <!-- end of layer checkbox section using bulma -->
+      
+      <!-- HTML with javascript for the map -->
       <div id="map"></div>
         <script>
           function initMap(){
@@ -363,7 +378,6 @@
           );
         }
       </script>
-
       <script
         async
         defer
@@ -371,27 +385,20 @@
           iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
       ></script>
       <!-- resorce for adding in map: https://www.youtube.com/watch?v=Zxf1mnP5zcw -->
-      <!-- <div class="mapout">
-        <div class="map-holder">
-          
-              <div class="gmap_canvas">
-                <iframe
-                  width="100%"
-                  height="600"
-                  id="gmap_canvas"
-                  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-                  frameborder="0"
-                  scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
-                ></iframe>
-              </div>
-          
-        </div>
-      </div> -->
     </div>
-    <!-- end of first portion elements -->
+
+     <!-- Satilite buttons for time series table -->
+     <div id="satcontainertwo">
+      <div class="emptyplaceholdertwo"></div>
+    <div class="sattwo">
+      <button type="button" style="width:50%">GOES-17</button>
+      <button type="button" style="width:50%">GOES-16</button>
+    </div>
+    </div>
+    
+    <!-- containes both the parameter checkbox and time series table -->
     <div class="instrument_status">
+      <!-- Pararmeter checkbox -->
       <div class="leftbox2">
         <div class="menu-label">
           <p>Parameter</p>
@@ -410,10 +417,14 @@
           </li>
         </ul>
       </div>
+
+      <!-- Time series table  -->
       <div class="time-series-box">
         <table id="datatable"></table>
       </div>
     </div>
+
+    <!--Footer -->
     <footer class="footer">
       <img class="wlogo" src="CISESS_W 1.png" alt="Nav Logo" />
     </footer>

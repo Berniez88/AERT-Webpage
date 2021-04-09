@@ -35,9 +35,7 @@ html {
   height: 600px;
   width: 50%;
   /* margin-left: 20px; */
-  margin-top: 100px;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-top: 33px;
   margin-right: auto;
 }
 
@@ -73,6 +71,10 @@ h2 {
   width: 50%; 
   background-color: black;
   color: white;
+  margin-bottom: auto;
+  margin-top: 33px;
+  max-width: 500px;
+  height: 600px;
 }
 .wrapper {
   display: flex;
@@ -111,9 +113,6 @@ h2 {
     width: max-content;
 }
 
-.email{
-  
-}
 /* Navigation bar and the styling please dont edit */
 .navbar {
   background-color: #4a6a8f;
@@ -132,7 +131,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 0mm;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0px;
   width: 100%;
 }

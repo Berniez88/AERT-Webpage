@@ -34,9 +34,9 @@ html {
 #map {
   height: 600px;
   width: 50%;
-  /* margin-left: 20px; */
+  margin-left: 20px;
   margin-top: 33px;
-  margin-right: auto;
+  flex-wrap: wrap;
 }
 
 .tooltip .tooltiptext {
@@ -79,6 +79,8 @@ h2 {
 .wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 700px;
 }
 
 #shour{

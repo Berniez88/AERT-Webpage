@@ -1,7 +1,10 @@
-body {
+body,html {
     background-color: #234a61;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  
+
   /* Header bar CSS */
   .header {
     display: flex;
@@ -222,6 +225,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 0mm;
+    position: absolute;
     bottom: 0px;
     width: 100%;
   }

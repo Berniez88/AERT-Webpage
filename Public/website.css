@@ -4,7 +4,7 @@ body,html {
     margin: 0 !important;
     padding: 0 !important;
   }
-
+  /* STATUS PAGE */
   /* Header bar CSS */
   .header {
     display: flex;
@@ -160,7 +160,7 @@ body,html {
   
   /* Container for Satilite options for the time series table */
   #satcontainertwo {
-    width: 71.5%;
+    /* width: 71.5%; */
     height: 60px;
     margin: 0 auto;
     background-color: #131d27;
@@ -177,7 +177,7 @@ body,html {
   }
   .sattwo {
     margin-top: 33px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     width: 70%;
     height: 60px;
     display: flex;

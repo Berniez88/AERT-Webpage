@@ -1,9 +1,9 @@
-body {
+/* body {
   background-color: #234a61;
-}
+} */
 
 /* Header bar CSS */
-.header {
+/* .header {
   display: flex;
   justify-content: center;
   font-family: "Roboto", sans-serif;
@@ -17,9 +17,9 @@ body {
     rgba(3, 210, 255, 0.58) 0%,
     rgba(19, 29, 39, 0.27) 100%
   );
-}
+} */
 
-h1 {
+/* h1 {
   display: flex;
   justify-content: center;
   font-family: Roboto;
@@ -27,20 +27,20 @@ h1 {
   font-weight: bold;
   font-size: 64px;
   color: #ffffff;
-}
+} */
 /* End of header bar css */
 
 /* Navigation bar CSS */
-.navbar {
+/* .navbar {
   background-color: #4a6a8f;
-}
-.navbar-item {
+} */
+/* .navbar-item {
   color: white;
-}
-.navbar-start {
+} */
+/* .navbar-start {
   background-color: #3d94c4;
-}
-.navbar-menu a.navbar-item:hover {
+} */
+/* .navbar-menu a.navbar-item:hover {
   background-color: #ea8a45;
   color: white;
 }
@@ -56,16 +56,16 @@ h1 {
 .menu-list,
 .menu-label {
   color: white;
-  /* position:absolute; */
+  
   font-weight: 500;
-  /* margin-top: 0px; */
+ 
   padding-left: 5mm;
   font-size: 10mm;
-}
+} */
 /* End of header bar CSS */
 
 /* Place holder for buttons at the top */
-.pagebuttons {
+/* .pagebuttons {
   margin-top: 33px;
   justify-content: center;
   display: flex;
@@ -80,11 +80,11 @@ h1 {
   border-color: #4a6a8f;
   text-align: center;
   color: white;
-}
+} */
 /* End */
 
 /* Container for Satilite options for the map */
-#satcontainer {
+/* #satcontainer {
   width: 100%;
   height: 60px;
   margin: 0 auto;
@@ -99,7 +99,7 @@ h1 {
   justify-content: center;
   margin-bottom: auto;
   max-width: 313px;
-  /* padding-top: 10px; */
+  
 }
 .sat {
   margin-top: 33px;
@@ -108,22 +108,22 @@ h1 {
   height: 60px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 /* End */
 
 /* Container for the map and checkbox */
-#wrap {
+/* #wrap {
   width: 100%;
   height: 700px;
   margin: 0 auto;
   background-color: #234a61;
   display: flex;
   justify-content: center;
-}
+} */
 /* End */
 
 /* Layers checkbox CSS */
-.leftbox1 {
+/* .leftbox1 {
   width: 30%;
   background-color: #4a6a8f;
   max-width: 313px;
@@ -141,22 +141,22 @@ li {
   border-color: rgba(19, 29, 39, 0.27);
   border-right-color: #3d94c4;
   color: white;
-}
+} */
 /* End */
 
 
 /* CSS for the map */
-#map {
+/* #map {
   height: 600px;
   width: 70%;
   margin-left: 20px;
   margin-top: 33px;
   flex-wrap: wrap;
-}
+} */
 /* End */
 
 /* Container for Satilite options for the time series table */
-#satcontainertwo {
+/* #satcontainertwo {
   width: 100%;
   height: 60px;
   margin: 0 auto;
@@ -179,22 +179,22 @@ li {
   height: 60px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 /* End */
 
 /* Container for the Parameter check box and data */
-.instrument_status {
+/* .instrument_status {
   width: 100%;
   height: 700px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   background-color: #131d27;
-}
+} */
 /* End */
 
 /* Styling for the Parameter checkbox */
-.leftbox2 {
+/* .leftbox2 {
   width: 30%;
   background-color: #4a6a8f;
   max-width: 313px;
@@ -202,21 +202,21 @@ li {
   margin-top: 33px;
   justify-content: center;
   margin-bottom: auto;
-}
+} */
 /* end */
 
 /* Syling for the times series placing */
-.time-series-box {
+/* .time-series-box {
   width: 70%;
   height: 600px;
-  /* padding-left: 20px; */
+  
   margin-top: 33px;
   background-color: white;
   margin-left: 20px;
-}
+} */
 
 /* CSS for the footer */
-.footer {
+/* .footer {
   background-color: #0e1316;
   display: flex;
   justify-content: center;
@@ -229,6 +229,6 @@ li {
   display: flex;
   justify-content: center;
   height: 20px;
-}
+} */
 /* End */
 

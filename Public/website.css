@@ -85,7 +85,7 @@ body {
   
   /* Container for Satilite options for the map */
   #satcontainer {
-    width: 100%;
+    width: 71.5%;
     height: 60px;
     margin: 0 auto;
     background-color: #234a61;
@@ -146,18 +146,18 @@ body {
   
   
   /* CSS for the map */
-  #map {
+  /* #map {
     height: 600px;
     width: 70%;
     margin-left: 20px;
     margin-top: 33px;
     flex-wrap: wrap;
-  }
+  } */
   /* End */
   
   /* Container for Satilite options for the time series table */
   #satcontainertwo {
-    width: 100%;
+    width: 71.5%;
     height: 60px;
     margin: 0 auto;
     background-color: #131d27;
@@ -207,12 +207,13 @@ body {
   
   /* Syling for the times series placing */
   .time-series-box {
-    width: 70%;
+    width: 50%;
     height: 600px;
     /* padding-left: 20px; */
     margin-top: 33px;
     background-color: white;
     margin-left: 20px;
+    flex: wrap;
   }
   
   /* CSS for the footer */

@@ -183,6 +183,9 @@ body,html {
     display: flex;
     flex-wrap: wrap;
   }
+  .statusbutton{
+    width: 50%;
+  }
   /* End */
   
   /* Container for the Parameter check box and data */
@@ -289,7 +292,7 @@ h2 {
 }
 .newtable {
   border-style: solid;
-  border-color: red;
+  border-color: white;
   display: flex;
   justify-content: center;
   width: 50%; 
@@ -300,6 +303,30 @@ h2 {
   max-width: 500px;
   height: 600px;
 }
+.newtable th{
+  padding: 5%;
+}
+/* .newtable {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  float: inherit;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  margin-top: 110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  text-align: center;
+} */
+.newtable h2,label{
+  color: white;
+}
+td, th {
+  padding: 5%;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;

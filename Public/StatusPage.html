@@ -55,13 +55,13 @@
     <!-- end of firts set of page buttons -->
 
     <!-- Satilite buttons for map -->
-    <div id="satcontainer">
+    <!-- <div id="satcontainer">
       <div class="emptyplaceholder"></div>
     <div class="sat">
       <button type="button" style="width:50%; background-color: #4a6a8f; border-radius: 4px;">GOES-17</button>
       <button type="button" style="width:50%; background-color: #4a6a8f; border-radius: 4px;">GOES-16</button>
     </div>
-    </div>
+    </div> -->
     <!-- end of map satilite buttons -->
 
     <!-- Wrapper that conatins all of the elements for the map and check boxes -->
@@ -97,7 +97,15 @@
       </div>
       
       <!-- HTML with javascript for the map -->
-      <div id="map"></div>
+      <div class="mapcont">
+      <div id="satcontainer">
+        <div class="sat">
+          <button type="button" style="width:50%; background-color: #4a6a8f; border-radius: 4px;">GOES-17</button>
+          <button type="button" style="width:50%; background-color: #4a6a8f; border-radius: 4px;">GOES-16</button>
+        </div>
+      
+
+      <div id="mapone"></div>
         <script>
           function initMap(){
            var options ={
@@ -374,7 +382,7 @@
            }
 
           var map = new google.maps.Map(
-            document.getElementById("map"),
+            document.getElementById("mapone"),
             options
           );
         }
@@ -386,6 +394,8 @@
           iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
       ></script>
       <!-- resorce for adding in map: https://www.youtube.com/watch?v=Zxf1mnP5zcw -->
+    </div>
+    </div>
     </div>
 
      <!-- Satilite buttons for time series table -->

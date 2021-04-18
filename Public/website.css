@@ -22,7 +22,7 @@ body,html {
     );
   }
 
-  h1 {
+  /* h1 {
     display: flex;
     justify-content: center;
     font-family: Roboto;
@@ -30,7 +30,7 @@ body,html {
     font-weight: bold;
     font-size: 64px;
     color: #ffffff;
-  }
+  } */
   /* End of header bar css */
   
   /* Navigation bar CSS */
@@ -254,7 +254,7 @@ body,html {
     display: flex;
     justify-content: center;
     padding: 0mm;
-    /* position: absolute; */
+    position: absolute;
     bottom: 0px;
     width: 100%;
   }
@@ -394,3 +394,10 @@ td, th {
 
 
 /* end of query page css */
+
+.text{
+  color: white;
+}
+.title{
+  color: #EA8A45;
+}

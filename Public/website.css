@@ -21,9 +21,7 @@ body,html {
       rgba(19, 29, 39, 0.27) 100%
     );
   }
-  .button{
-      color: red;
-  }
+
   h1 {
     display: flex;
     justify-content: center;

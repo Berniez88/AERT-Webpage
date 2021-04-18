@@ -58,12 +58,16 @@ body,html {
   
   .menu-list,
   .menu-label {
-    color: white;
-    /* position:absolute; */
-    font-weight: 500;
-    /* margin-top: 0px; */
+    
     padding-left: 5mm;
-    font-size: 10mm;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
   }
   /* End of header bar CSS */
   
@@ -80,11 +84,12 @@ body,html {
     width: 230px;
     border-style: solid;
     background-color: #3d94c4;
-    border-color: #3485b1;
+    border-color: #25374B;
     text-align: center;
     color: white;
     border-radius: 4px;
-    
+    justify-content: center;
+    display: flex;
   }
   /* End */
   
@@ -145,16 +150,19 @@ body,html {
     margin-top: 33px;
     justify-content: center;
     margin-bottom: auto;
+    background: #25374B;
   }
   li {
     background-color: #3d94c4;
     padding-left: 5mm;
-    font-size: 6mm;
-    letter-spacing: 1mm;
+    font-size: 20px;
+    /* letter-spacing: 1mm; */
     border-style: solid;
-    border-color: rgba(19, 29, 39, 0.27);
-    border-right-color: #3d94c4;
+    border-color: #25374B;
     color: white;
+    font-family: Roboto;
+
+    font-style: normal;
   }
   /* End */
   
@@ -226,6 +234,7 @@ body,html {
     margin-top: 33px;
     justify-content: center;
     margin-bottom: auto;
+    background: #25374B;
   }
   /* end */
   

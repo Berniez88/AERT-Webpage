@@ -1,3 +1,4 @@
+// CODE FOR THE GLM SUBCHECKBOXES
 var checkboxes = document.querySelectorAll('input.subOption'),
     checkall = document.getElementById('option3');
 

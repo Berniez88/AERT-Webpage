@@ -94,10 +94,10 @@ body,html {
   .mapcont {
     height: 600px;
     width: 60%;
-  margin-left: 20px;
-  margin-top: 33px;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-left: 20px;
+    margin-top: 33px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   #satcontainer {
     width: 100%;
@@ -130,7 +130,7 @@ body,html {
   /* Container for the map and checkbox */
   #wrap {
     width: 100%;
-    height: 700px;
+    height: 730px;
     margin: 0 auto;
     background-color: #234a61;
     display: flex;
@@ -172,12 +172,20 @@ body,html {
   /* End */
   
   /* Container for Satilite options for the time series table */
+  .timecont {
+    height: 600px;
+    width: 60%;
+    margin-left: 20px;
+    margin-top: 33px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   #satcontainertwo {
     /* width: 71.5%; */
     height: 60px;
     margin: 0 auto;
     background-color: #131d27;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
   }
   .emptyplaceholdertwo{
@@ -189,9 +197,8 @@ body,html {
     max-width: 313px;
   }
   .sattwo {
-    margin-top: 33px;
-    /* margin-left: 20px; */
-    width: 70%;
+    margin-left: 20px;
+    width: 100%;
     height: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -204,7 +211,7 @@ body,html {
   /* Container for the Parameter check box and data */
   .instrument_status {
     width: 100%;
-    height: 700px;
+    height: 730px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -226,13 +233,12 @@ body,html {
   
   /* Syling for the times series placing */
   .time-series-box {
-    width: 50%;
-    height: 600px;
-    /* padding-left: 20px; */
-    margin-top: 33px;
     background-color: white;
+    height: 600px;
+    width: 100%;
     margin-left: 20px;
-    flex: wrap;
+    /* margin-top: 33px; */
+    flex-wrap: wrap;
   }
   
   /* CSS for the footer */
@@ -250,7 +256,7 @@ body,html {
     display: flex;
     justify-content: center;
     padding: 0mm;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0px;
     width: 100%;
   }

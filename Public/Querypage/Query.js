@@ -54,6 +54,11 @@
 // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
+
+const minLong = document.querySelector('.minLong');
+const mLat = document.querySelector('.minLat');
+const maxLong = document.querySelector('.maxLong');
+const minLat = document.querySelector('.maxLat');
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 10,
@@ -71,6 +76,9 @@ function initMap() {
     ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
     ["Maroubra Beach", -33.950198, 151.259302, 1],
   ];
+  const beaches = [
+    
+  ]
   
   function setMarkers(map) {
     var bounds = new google.maps.LatLngBounds();

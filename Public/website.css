@@ -80,6 +80,7 @@ body,html {
     height: 50px;
     background-color: #234a61;
   }
+  
   .pagebuttons a {
     width: 230px;
     border-style: solid;
@@ -127,7 +128,6 @@ body,html {
     flex-wrap: wrap;
     
   }
-
   /* End */
   
   /* Container for the map and checkbox */

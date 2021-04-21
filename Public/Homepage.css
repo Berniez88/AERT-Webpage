@@ -73,3 +73,11 @@ a {
   margin-right: auto;
   width: 50%;
 }
+
+.twitter-tweet {
+  display: block;
+  margin-left: auto;
+  margin-right: -20;
+  text-align: center;
+
+}

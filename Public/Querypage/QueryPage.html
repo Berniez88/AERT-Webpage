@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,22 +50,22 @@
             <tr>
               <th>
                 <h2>Minimum Longitude</h2>
-                <input type="text" />
+                <input type="text" class="minLong" />
               </th>
               <th>
                 <h2>Minimum Latitude</h2>
-                <input type="text" />
+                <input type="text" class="minLat"/>
               </th>
             </tr>
 
             <tr>
               <th>
                 <h2>Maximum Longitude</h2>
-                <input type="text" />
+                <input type="text" class="maxLong"/>
               </th>
               <th>
                 <h2>Maximum Latitude</h2>
-                <input type="text" />
+                <input type="text" class="maxLat"/>
               </th>
             </tr>
 
@@ -537,5 +538,6 @@
     <footer class="Qfooter">
       <img class="wlogo" src="/Public/CISESS_W 1.png" alt="Nav Logo" />
     </footer>
+    <script src="/Public/Querypage/Query.js"></script>
   </body>
 </html>

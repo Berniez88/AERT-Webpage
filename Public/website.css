@@ -4,6 +4,93 @@ body,html {
     margin: 0 !important;
     padding: 0 !important;
   }
+
+  /* Homepage */
+  
+  body {
+    background: radial-gradient(
+      40.86% 50% at 50% 50%,
+      rgba(3, 210, 255, 0.78) 0%,
+      rgba(19, 29, 39, 0.27) 100%
+    );
+    background: rgba(37, 55, 75, 0.9);
+  }
+  html {
+    background: rgba(37, 55, 75, 0.9);
+  }
+  
+  button {
+    background-color: #3d94c4;
+  }
+  h2 {
+    color: #ea8a45;
+  }
+  p {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4a6a8f;
+  }
+  li {
+    float: left;
+  }
+  a {
+    display: block;
+    padding: 8px;
+  }
+  
+  .navbar {
+    background-color: #4a6a8f;
+  }
+  .navbar-item {
+    color: white;
+  }
+  .navbar-start {
+    background-color: #3d94c4;
+  }
+  .navbar-menu a.navbar-item:hover {
+    background-color: #ea8a45;
+    color: white;
+  }
+  
+  .footer {
+    margin-top: 100%;
+    background-color: #0E1316;
+    display: flex;
+    justify-content: center;
+    padding: 0mm;
+  }
+  
+  .wlogo {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+  
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .twitter-tweet {
+    display: block;
+    margin-left: auto;
+    margin-right: -28;
+    text-align: center;
+  
+  }
+  
   /* STATUS PAGE */
   /* Header bar CSS */
   .header {

@@ -8,7 +8,84 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper">
+    <table class="actualtable">
+      <tbody>
+          <tr class="section1">
+            <th>
+              <h2>Minimum Longitude</h2>
+              <input type="text" />
+            </th>
+            <th>
+              <h2>Minimum Latitude</h2>
+              <input type="text" />
+            </th>
+          </tr>
+      
+          <tr class="section2"> 
+            <th>
+              <h2>Maximum Longitude</h2>
+              <input type="text" />
+            </th>
+            <th>
+              <h2>Maximum Latitude</h2>
+              <input type="text" />
+            </th>
+          </tr>
+          <div class="middle">
+            <tr class="section3">
+              <th>
+                <h2 class="start">Start</h2>
+                <h2>Start hour</h2>
+                <input
+                  type="number"
+                  min="0"
+                  max="24"
+                  name="starthour"
+                  id="shour"
+                  style="font-size: 14px"
+                />
+          
+              </th>
+              <th colspan="2">
+                <h2>Date</h2>
+                <input
+                  type="date"
+                  name="startday"
+                  id="startday"
+                  style="font-size: 14px"
+                />
+              </th>
+            </th>
+            </tr>
+
+            <tr class="section4">
+              <th>
+                <h2 class="end">End</h2>
+                <h2>End hour</h2>
+                <input
+                  type="number"
+                  min="0"
+                  max="24"
+                  name="starthour"
+                  id="shour"
+                  style="font-size: 14px"
+                />
+          
+              </th>
+              <th colspan="2">
+                <h2>Date</h2>
+                <input
+                  type="date"
+                  name="startday"
+                  id="startday"
+                  style="font-size: 14px"
+                />
+              </th>
+            </tr>
+          </div>
+
+    </table>
+    <!-- <div class="wrapper">
       <table class="newtable">
         <form class="newform">
           <tbody>
@@ -36,13 +113,24 @@
 
             <tr>
               <th>
-                <h2>Start hour</h2>
+                <h2>Start</h2>
+                <h2>Starting hour</h2>
                 <input
                   type="number"
                   min="0"
                   max="24"
                   name="starthour"
                   id="shour"
+                  style="font-size: 14px"
+                />
+          
+              </th>
+              <th colspan="2">
+                <h2>Date</h2>
+                <input
+                  type="date"
+                  name="startday"
+                  id="startday"
                   style="font-size: 14px"
                 />
               </th>
@@ -57,6 +145,15 @@
                   style="font-size: 14px"
                 />
               </th>
+              <th colspan="2">
+              <h2>Date</h2>
+              <input
+                type="date"
+                name="startday"
+                id="startday"
+                style="font-size: 14px"
+              />
+            </th>
             </tr>
             <tr>
               <td>
@@ -133,6 +230,6 @@
           </tbody>
         </form>
       </table>
-    </div>
+    </div> -->
   </body>
 </html>

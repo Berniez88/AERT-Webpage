@@ -35,7 +35,10 @@ function initMap(){
     streetViewControlOptions: {
       position: google.maps.ControlPosition.LEFT_TOP,
     },
-    fullscreenControl: false,
+    fullscreenControl: true,
+    fullscreenControlOptions: {
+      position: google.maps.ControlPosition.RIGHT_BOTTOM,
+    },
     styles: [
               {
                 "elementType": "geometry",

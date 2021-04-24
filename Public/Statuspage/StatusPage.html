@@ -104,9 +104,16 @@
           <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-17</button>
           <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-16</button>
         </div>
-      
-      
-        
+      <!-- Dispaly geo location -->
+      <ol class="geo-data">
+        <li>Sector: <span id="location"></span></li>
+        <li><span id="conus"></span></li>
+        <li><span id="disk"></span></li>
+        <li><span id="ocean"></span></li>
+      </ol>
+      <!-- Search input -->
+      <input id="searchInput" class="controls" type="text" placeholder="Enter a location" style="width: 30%;">
+        <!--Google Maps -->
       <div id="mapone"></div>
         <!-- <script> -->
         <!-- //   function initMap(){
@@ -397,7 +404,7 @@
         async
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
-          iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
+          iVi9zepurq7xIc&callback=initMap&libraries=places&keys"
       ></script>
       
       <!-- resorce for adding in map: https://www.youtube.com/watch?v=Zxf1mnP5zcw -->

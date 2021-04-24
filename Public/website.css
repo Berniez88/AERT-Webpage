@@ -7,7 +7,7 @@ body,html {
 
   /* Homepage */
   
-  body {
+  /* body {
     background: radial-gradient(
       40.86% 50% at 50% 50%,
       rgba(3, 210, 255, 0.78) 0%,
@@ -74,7 +74,7 @@ body,html {
     justify-content: center;
     height: 20px;
   
-  }
+  } */
   
   .center {
     display: block;
@@ -108,7 +108,29 @@ body,html {
       rgba(19, 29, 39, 0.27) 100%
     );
   }
+  
+.geo-data {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin-left: 20px;
+}
+.geo-data li {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  border-width: 1px;
+  background-color: White;
+  color: black;
 
+  font-size: 20px;
+  /* letter-spacing: 1mm; */
+  border-style: solid;
+  font-family: Roboto;
+  font-style: normal;
+  border-width: 1px;
+}
   /* h1 {
     display: flex;
     justify-content: center;
@@ -239,7 +261,7 @@ body,html {
     margin-bottom: auto;
     background: #25374B;
   }
-  li {
+  .leftbox1 li {
     background-color: #3d94c4;
     padding-left: 5mm;
     font-size: 20px;
@@ -248,15 +270,16 @@ body,html {
     border-color: #25374B;
     color: white;
     font-family: Roboto;
-
     font-style: normal;
+    border-width: 1px;
   }
   /* End */
   
   
   /* CSS for the map */
   #mapone {
-    height: 600px;
+    height: 560px;
+    /* height: 600px */
     width: 100%;
     margin-left: 20px;
     /* margin-top: 33px; */
@@ -322,6 +345,19 @@ body,html {
     justify-content: center;
     margin-bottom: auto;
     background: #25374B;
+  }
+
+  .leftbox2 li {
+    background-color: #3d94c4;
+    padding-left: 5mm;
+    font-size: 20px;
+    /* letter-spacing: 1mm; */
+    border-style: solid;
+    border-color: #25374B;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    border-width: 1px;
   }
   /* end */
   

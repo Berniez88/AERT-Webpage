@@ -7,26 +7,15 @@ html,body {
   width: 50%;
   height: 70%;
 }
-.middle{
-  display: flex;
-  flex-direction: column;
-}
-/* .section3{
-  display: flex;
-  flex-direction: column;
-}
-.section4{
-  display: flex;
-  flex-direction: column;
-}
- */
-.start, .end{
-  display: flex;
-  justify-content: center;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  left: -10%;
 }
 
-
-/* .tooltip .tooltiptext {
+/* Tooltip text */
+.tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -34,32 +23,33 @@ html,body {
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+
+  /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
   margin-left: -60px;
+
+  /* Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;
 }
-h2 {
-  display: flex;
-  justify-content: center;
-}
-.bbutton {
-  display: flex;
-  justify-content: center;
-}
-.newtable {
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
   border-style: solid;
-  border-color: red;
-  display: flex;
-  justify-content: center;
-  width: 20%;
-  background-color: black;
-  color: white;
+  border-color: #555 transparent transparent transparent;
 }
-.wrapper {
-  display: flex;
-  justify-content: center;
-} */
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

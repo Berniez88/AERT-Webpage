@@ -290,6 +290,26 @@ body,html {
     /* margin-top: 33px; */
     flex-wrap: wrap;
   }
+
+  /* map slider bar and play button css */
+#myProgress {
+  width: 25%;
+  /* background-color: #ddd; */
+  display: flex;
+  margin-bottom: 15px;
+}
+#slidecontainer {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+
+#playbutton {
+  height: 30px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
   /* End */
   
   /* Container for Satilite options for the time series table */

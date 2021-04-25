@@ -463,15 +463,23 @@ h2 {
   justify-content: center;
   background-color: red;
   padding-top:10px;
+  margin-left: 15%;
+  margin-top: 2%;
 }
 table th {
   color: #363636;
   padding: 20px;
 }
-/* .section3, .section4{
-  padding-top: 10%;
-} */
 
+.section1 input, .section2 input{
+background-color: green;
+
+}
+
+#startday{
+  display: flex;
+  margin: auto;
+}
 /* .actualtable tr{
   padding: 10%;
 } */
@@ -535,39 +543,12 @@ table th {
   opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* .newtable {
-  border-style: solid;
-  border-color: white;
+.title.is-4 {
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
-  width: 50%; 
-  background-color: black;
-  color: white;
-  margin-bottom: auto;
-  margin-top: 33px;
-  max-width: 500px;
-  height: 600px;
 }
-.newtable th{
-  padding: 5%;
-} */
 
-/* .newtable h2,label{
-  color: white;
-} */
-/* td, th {
-  padding: 5%;
-} */
 
 .wrapper {
   display: flex;
@@ -575,38 +556,6 @@ table th {
   width: 100%;
   height: 700px;
 }
-
-/* #shour{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#ehour{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#startday{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#email{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.gdata{
-    display: flex;
-    margin-right: auto;
-    align-items: center;
-    margin: 5%;
-    width: max-content;
-} */
 
 /* Navigation bar and the styling please dont edit */
 .navbar {

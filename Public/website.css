@@ -410,7 +410,7 @@ body,html {
 
   /* QUERY PAGE */
 
-  .mapheader,
+.mapheader,
 .mapheader h3 {
   justify-content: center;
   height: 30px;
@@ -433,11 +433,82 @@ h2 {
   display: flex;
   justify-content: center;
 }
-.bbutton {
+
+.actualtable{
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+#shour {
+  background-color: blue;
+  width: 40%;
+  display: flex;
+  margin: auto;
+}
+#email{
+  display: flex;
+
+  margin: auto;
+}
+.tooltip {
   display: flex;
   justify-content: center;
 }
-.newtable {
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .newtable {
   border-style: solid;
   border-color: white;
   display: flex;
@@ -452,14 +523,14 @@ h2 {
 }
 .newtable th{
   padding: 5%;
-}
+} */
 
-.newtable h2,label{
+/* .newtable h2,label{
   color: white;
-}
-td, th {
+} */
+/* td, th {
   padding: 5%;
-}
+} */
 
 .wrapper {
   display: flex;
@@ -468,7 +539,7 @@ td, th {
   height: 700px;
 }
 
-#shour{
+/* #shour{
   display: flex;
   justify-content: center;
   margin: auto;
@@ -498,7 +569,7 @@ td, th {
     align-items: center;
     margin: 5%;
     width: max-content;
-}
+} */
 
 /* Navigation bar and the styling please dont edit */
 .navbar {
@@ -510,8 +581,6 @@ td, th {
 .navbar-start {
   background-color: #3d94c4;
 }
-
-
 
 
 /* end of query page css */

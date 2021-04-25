@@ -433,15 +433,32 @@ h2 {
   display: flex;
   justify-content: center;
 }
-
+.qpage{
+  display: flex;
+  flex-direction: row;
+}
 .actualtable{
-  width: 40%;
-  height: 60%;
+  width: 30%;
   display: flex;
   justify-content: center;
   background-color: red;
+  padding-top:10px;
 }
+table th {
+  color: #363636;
+  padding: 20px;
+}
+/* .section3, .section4{
+  padding-top: 10%;
+} */
 
+/* .actualtable tr{
+  padding: 10%;
+} */
+.bottomtable {
+  display: flex;
+  justify-content: space-evenly;
+}
 #shour {
   background-color: blue;
   width: 40%;
@@ -588,6 +605,6 @@ h2 {
 .text{
   color: white;
 }
-.title{
+/* .title{
   color: #EA8A45;
-}
+} */

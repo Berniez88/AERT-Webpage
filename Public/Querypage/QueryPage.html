@@ -41,14 +41,14 @@
       <h1>Query Page</h1>
     </div>
 
-    <div class="qpage"></div>
-    <!-- NEW AND MODIFED TABLE -->
     
+    <!-- NEW AND MODIFED TABLE -->
+    <div class="qpage">
     <table class="actualtable">
       <tbody>
           <tr class="section1">
             <th>
-              <h2>Minimum Longitude</h2>
+              <h4 class="title is-4">Minimum Longitude</h4>
               <input type="text" />
             </th>
             <th>
@@ -132,6 +132,18 @@
               style="font-size: 14px"
             />
           </th>
+          <th>
+
+          <tr class="bottomtable">
+            <td>
+              <input type="submit" class="button" value="Submit" id="submit" name="submit">
+              <br>
+            </td>
+            <td>
+              <input type="reset" class="button" value="Reset" id="reset" name="reset" onclick="setDateAndHour()">
+            </td>
+          </tr>            
+        </th>
     </table>
     <div class="wrapper">
 
@@ -417,13 +429,15 @@
         );
       }
     </script>
+    </div>
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
         iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
     ></script>
-    </div>
+  </div>
+    
 
 
     <!-- HTML portion for the table -->

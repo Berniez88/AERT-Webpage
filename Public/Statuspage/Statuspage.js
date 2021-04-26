@@ -662,6 +662,8 @@ function initMap(){
 
 
   // for map search bar
+ 
+  google.maps.event.addDomListener(window, 'load', initialize);
   var input = document.getElementById('searchInput');
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 

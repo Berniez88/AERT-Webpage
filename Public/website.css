@@ -461,7 +461,7 @@ h2 {
   width: 30%;
   display: flex;
   justify-content: center;
-  background-color: red;
+  background-color: rgb(236, 183, 183);
   padding-top:10px;
   margin-left: 15%;
   margin-top: 2%;
@@ -498,9 +498,18 @@ background-color: green;
 
   margin: auto;
 }
-.tooltip {
+
+
+
+/* .tooltip {
   display: flex;
   justify-content: center;
+} */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  left: -10%;
 }
 
 /* Tooltip text */
@@ -543,6 +552,10 @@ background-color: green;
   opacity: 1;
 }
 
+
+
+
+
 .title.is-4 {
   font-size: 1.5rem;
   display: flex;
@@ -573,7 +586,4 @@ background-color: green;
 
 .text{
   color: white;
-}
-/* .title{
-  color: #EA8A45;
 }

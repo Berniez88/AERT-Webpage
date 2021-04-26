@@ -290,6 +290,26 @@ body,html {
     /* margin-top: 33px; */
     flex-wrap: wrap;
   }
+
+  /* map slider bar and play button css */
+#myProgress {
+  width: 25%;
+  /* background-color: #ddd; */
+  display: flex;
+  margin-bottom: 15px;
+}
+#slidecontainer {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+
+#playbutton {
+  height: 30px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
   /* End */
   
   /* Container for Satilite options for the time series table */
@@ -433,15 +453,40 @@ h2 {
   display: flex;
   justify-content: center;
 }
-
+.qpage{
+  display: flex;
+  flex-direction: row;
+}
 .actualtable{
-  width: 40%;
-  height: 60%;
+  width: 30%;
   display: flex;
   justify-content: center;
   background-color: red;
+  padding-top:10px;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+table th {
+  color: #363636;
+  padding: 20px;
 }
 
+.section1 input, .section2 input{
+background-color: green;
+
+}
+
+#startday{
+  display: flex;
+  margin: auto;
+}
+/* .actualtable tr{
+  padding: 10%;
+} */
+.bottomtable {
+  display: flex;
+  justify-content: space-evenly;
+}
 #shour {
   background-color: blue;
   width: 40%;
@@ -498,39 +543,12 @@ h2 {
   opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* .newtable {
-  border-style: solid;
-  border-color: white;
+.title.is-4 {
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
-  width: 50%; 
-  background-color: black;
-  color: white;
-  margin-bottom: auto;
-  margin-top: 33px;
-  max-width: 500px;
-  height: 600px;
 }
-.newtable th{
-  padding: 5%;
-} */
 
-/* .newtable h2,label{
-  color: white;
-} */
-/* td, th {
-  padding: 5%;
-} */
 
 .wrapper {
   display: flex;
@@ -538,38 +556,6 @@ h2 {
   width: 100%;
   height: 700px;
 }
-
-/* #shour{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#ehour{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#startday{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#email{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.gdata{
-    display: flex;
-    margin-right: auto;
-    align-items: center;
-    margin: 5%;
-    width: max-content;
-} */
 
 /* Navigation bar and the styling please dont edit */
 .navbar {
@@ -588,6 +574,6 @@ h2 {
 .text{
   color: white;
 }
-.title{
+/* .title{
   color: #EA8A45;
 }

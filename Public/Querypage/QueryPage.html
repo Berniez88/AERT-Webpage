@@ -41,44 +41,47 @@
       <h1>Query Page</h1>
     </div>
 
-    <div class="qpage"></div>
-    <!-- NEW AND MODIFED TABLE -->
     
+    <!-- NEW AND MODIFED TABLE -->
+    <div class="qpage">
     <table class="actualtable">
       <tbody>
           <tr class="section1">
             <th>
-              <h2>Minimum Longitude</h2>
+              <h4 class="title is-4">Minimum Longitude</h4>
               <input type="text" />
             </th>
             <th>
-              <h2>Minimum Latitude</h2>
+              <h4 class="title is-4">Minimum Latitude</h4>
               <input type="text" />
             </th>
           </tr>
       
           <tr class="section2"> 
             <th>
-              <h2>Maximum Longitude</h2>
+              <h4 class="title is-4">Maximum Longitude</h4>
               <input type="text" />
             </th>
             <th>
-              <h2>Maximum Latitude</h2>
+              <h4 class="title is-4">Maximum Latitude</h4>
               <input type="text" />
             </th>
           </tr>
           <tr class="middle">
             <tr>
               <th class="section3">
-                <h2 class="start">Start</h2>
+                <h2>Start</h2>
                 <h2>Date</h2>
+                <!-- <h6 class="title is-6">Start</h6>
+                <h6 class="title is-6">Date</h6> -->
                 <input
                    type="date"
                    name="startday"
                    id="startday"
                    style="font-size: 14px"
                  />
-                <h2>Start hour</h2>
+                 <h2>Start hour</h2>
+                 <!-- <h6 class="title is-6">Start hour</h6> -->
                 <input
                   type="number"
                   min="0"
@@ -91,15 +94,18 @@
               </th>
             </th>
             <th class="section4">
-              <h2 class="end">End</h2>
+              <h2>End</h2>
               <h2>Date</h2>
+              <!-- <h6 class="title is-6">End</h6>
+              <h6 class="title is-6">Date</h6> -->
                <input
                 type="date"
                 name="startday"
                 id="startday"
                  style="font-size: 14px"
                />
-              <h2>End hour</h2>
+               <h2>End hour</h2>
+               <!-- <h6 class="title is-6">End hour</h6> -->
               <input
                 type="number"
                 min="0"
@@ -112,7 +118,7 @@
             </tr>
           </tr>
           <th colspan="2">
-            <h2>Email<br /></h2>
+            <h4 class="title is-4">Email</h4>
             <div class="tooltip">
               <i class="fa fa-info-circle"></i>
               <span class="tooltiptext"
@@ -132,6 +138,17 @@
               style="font-size: 14px"
             />
           </th>
+
+          <tr class="bottomtable">
+            <td>
+              <input type="submit" class="button" value="Submit" id="submit" name="submit">
+              <br>
+            </td>
+            <td>
+              <input type="reset" class="button" value="Reset" id="reset" name="reset" onclick="setDateAndHour()">
+            </td>
+          </tr>            
+        </th>
     </table>
     <div class="wrapper">
 
@@ -417,13 +434,15 @@
         );
       }
     </script>
+    </div>
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
         iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
     ></script>
-    </div>
+  </div>
+    
 
 
     <!-- HTML portion for the table -->

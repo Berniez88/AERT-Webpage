@@ -55,42 +55,58 @@
 // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
 // to the base of the flagpole.
 
-const minLong = document.querySelector('.minLong');
-const mLat = document.querySelector('.minLat');
-const maxLong = document.querySelector('.maxLong');
-const minLat = document.querySelector('.maxLat');
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 10,
-      center: { lat: 0, lng: 0 },
-    });
-    setMarkers(map);
-  }
-  // Data for the markers consisting of a name, a LatLng and a zIndex for the
-  // order in which these markers should display on top of each other.
-  const beaches = [
-      ["Longitude", ]
-    ["Bondi Beach", -33.890542, 151.274856, 4],
-    ["Coogee Beach", -33.923036, 151.259052, 5],
-    ["Cronulla Beach", -34.028249, 151.157507, 3],
-    ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
-    ["Maroubra Beach", -33.950198, 151.259302, 1],
-  ];
-  const beaches = [
+// const minLong = document.querySelector('.minLong');
+// const mLat = document.querySelector('.minLat');
+// const maxLong = document.querySelector('.maxLong');
+// const minLat = document.querySelector('.maxLat');
+// function initMap() {
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//       zoom: 10,
+//       center: { lat: 0, lng: 0 },
+//     });
+//     setMarkers(map);
+//   }
+//   // Data for the markers consisting of a name, a LatLng and a zIndex for the
+//   // order in which these markers should display on top of each other.
+//   const beaches = [
+//       ["Longitude", ]
+//     ["Bondi Beach", -33.890542, 151.274856, 4],
+//     ["Coogee Beach", -33.923036, 151.259052, 5],
+//     ["Cronulla Beach", -34.028249, 151.157507, 3],
+//     ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+//     ["Maroubra Beach", -33.950198, 151.259302, 1],
+//   ];
+//   const beaches = [
     
-  ]
+//   ]
   
-  function setMarkers(map) {
-    var bounds = new google.maps.LatLngBounds();
-    // Adds markers to the map.
-    for (let i = 0; i < beaches.length; i++) {
-      const beach = beaches[i];
-      var marker = new google.maps.Marker({
-        position: { lat: beach[1], lng: beach[2] },
-        map,
-        title: beach[0],
-      });
-      bounds.extend(marker.getPosition());
-    }
-    map.fitBounds(bounds);
-  }
+//   function setMarkers(map) {
+//     var bounds = new google.maps.LatLngBounds();
+//     // Adds markers to the map.
+//     for (let i = 0; i < beaches.length; i++) {
+//       const beach = beaches[i];
+//       var marker = new google.maps.Marker({
+//         position: { lat: beach[1], lng: beach[2] },
+//         map,
+//         title: beach[0],
+//       });
+//       bounds.extend(marker.getPosition());
+//     }
+//     map.fitBounds(bounds);
+//   }
+
+function setDateAndHour() {
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  var day2 = date.getDate() - 2;
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+
+  var today = year + "-" + month + "-" + day;
+  var yesterday = year + "-" + month + "-" + day2;
+  document.getElementById('startday').value = today;
+  document.getElementById('shour').value = 0;
+  document.getElementById('ehour').value = 23;
+}

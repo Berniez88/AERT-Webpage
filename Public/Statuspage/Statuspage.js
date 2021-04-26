@@ -362,6 +362,9 @@ checkall.onclick = function() {
 
 
 
+
+
+
 function initMap(){
   var map=new google.maps.Map(document.getElementById("mapone"), {
     zoom:4,
@@ -650,6 +653,15 @@ function initMap(){
             ]
   });
 
+  // for time line slider
+  var playButton = document.getElementById('playbutton');
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(playButton);
+  
+  var slider = document.getElementById('myProgress');
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(slider);
+
+
+  // for map search bar
   var input = document.getElementById('searchInput');
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 
@@ -703,5 +715,29 @@ function initMap(){
 
     // add in location details for the information box
   });
+  
+ 
 }
-google.maps.event.addDomListener(window, "load", initMap);
+
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("slidecontainer");
+    var width = 1;
+    var id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+// controls the maps loading as the page is opened
+google.maps.event.addDomtListener(window, "load", initMap);
+
+

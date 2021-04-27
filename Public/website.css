@@ -585,4 +585,10 @@ background-color: green;
 }
 /* .title{
   color: #EA8A45;
-}
+}*/
+
+/* @media screen and (max-width: 900px) {
+  .mapcont {
+    flex-wrap: wrap;
+  }
+} */

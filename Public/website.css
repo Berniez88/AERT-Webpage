@@ -593,6 +593,11 @@ table th {
 /* .title{
   color: #EA8A45;
 }*/
+.title.is-3 {
+  font-size: 2rem;
+  color: #ea8a45;
+}
+
 
 /* @media screen and (max-width: 900px) {
   .mapcont {

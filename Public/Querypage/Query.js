@@ -103,10 +103,11 @@ function setDateAndHour() {
   var day2 = date.getDate() - 2;
   if (month < 10) month = "0" + month;
   if (day < 10) day = "0" + day;
-
+  var endday = year + "-" + month + "-" + day;
   var today = year + "-" + month + "-" + day;
   var yesterday = year + "-" + month + "-" + day2;
   document.getElementById('startday').value = today;
+  document.getElementById('endday').value = endday;
   document.getElementById('shour').value = 0;
   document.getElementById('ehour').value = 23;
 }

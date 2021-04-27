@@ -590,10 +590,12 @@ table th {
 .text{
   color: white;
 }
+/* .title{
+  color: #EA8A45;
+}*/
 
-
-/* About page */
-.title.is-3 {
-  font-size: 2rem;
-  color: #ea8a45;
-}
+/* @media screen and (max-width: 900px) {
+  .mapcont {
+    flex-wrap: wrap;
+  }
+} */

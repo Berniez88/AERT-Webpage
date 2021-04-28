@@ -662,59 +662,115 @@ function initMap(){
 
 
   // for map search bar
+  // var input = document.getElementById('searchInput');
+  // map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+
+  // Create the search box and link it to the UI element.
   var input = document.getElementById('searchInput');
+  const searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 
-  var autocomplete = new google.maps.places.Autocomplete(input);
-  autocomplete.bindTo('bounds', maps);
-
-  var infowindow = new google.maps.InfoWindow();
-  var marker = new google.maps.Marker({
-    map: map,
-    anchorPoint: new google.maps.Point(0,-29)
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
   });
+  let markers = [];
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener("places_changed", () => {
+    const places = searchBox.getPlaces();
 
-  autocomplete.addListener('place_changed', function() {
-    infowindow.close();
-    marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
+    if (places.length == 0) {
       return;
     }
+    // Clear out the old markers.
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+    // For each place, get the icon, name and location.
+    const bounds = new google.maps.LatLngBounds();
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+      // Create a marker for each place.
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+        })
+      );
+
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+  });
+  // var autocomplete = new google.maps.places.Autocomplete(input);
+  // autocomplete.bindTo('bounds', maps);
+
+  // var infowindow = new google.maps.InfoWindow();
+  // var marker = new google.maps.Marker({
+  //   map: map,
+  //   anchorPoint: new google.maps.Point(0,-29)
+  // });
+
+  // autocomplete.addListener('place_changed', function() {
+  //   infowindow.close();
+  //   marker.setVisible(false);
+  //   var place = autocomplete.getPlace();
+  //   if (!place.geometry) {
+  //     window.alert("Autocomplete's returned place contains no geometry");
+  //     return;
+  //   }
 
     // If place has geometry, then place on the map.
-    if (place.geometry.viewport) {
-      map.fitBounds(place.geometry.viewport);
-    }
-    else {
-      map.setCenter(place.geometry.location);
-      map.setZoom(17);
-    }
-    marker.setIcon(({
-      url:place.icon,
-      size: new google.maps.Size(71, 71),
-      origion: new google.maps.Point(0,0),
-      anchor: new google.maps.Point(17,34),
-      scaledSize: new google.maps.Size(35,35)
-    }));
-    marker.setPosition(place.geometry.location);
-    marker.setCenter(true);
+  //   if (place.geometry.viewport) {
+  //     map.fitBounds(place.geometry.viewport);
+  //   }
+  //   else {
+  //     map.setCenter(place.geometry.location);
+  //     map.setZoom(17);
+  //   }
+  //   marker.setIcon(({
+  //     url:place.icon,
+  //     size: new google.maps.Size(71, 71),
+  //     origion: new google.maps.Point(0,0),
+  //     anchor: new google.maps.Point(17,34),
+  //     scaledSize: new google.maps.Size(35,35)
+  //   }));
+  //   marker.setPosition(place.geometry.location);
+  //   marker.setCenter(true);
 
-    var address = '';
-    if (place.address_components) {
-      address = [
-        (place.address_compnents[0] && place.address_components[0].short_name || ''),
-        (place.address_compnents[1] && place.address_components[1].short_name || ''),
-        (place.address_compnents[2] && place.address_components[2].short_name || '')
-      ].join(' ');
-    }
+  //   var address = '';
+  //   if (place.address_components) {
+  //     address = [
+  //       (place.address_compnents[0] && place.address_components[0].short_name || ''),
+  //       (place.address_compnents[1] && place.address_components[1].short_name || ''),
+  //       (place.address_compnents[2] && place.address_components[2].short_name || '')
+  //     ].join(' ');
+  //   }
 
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    infowindow.open(map, marker);
+  //   infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+  //   infowindow.open(map, marker);
 
-    // add in location details for the information box
-  });
+  //   // add in location details for the information box
+  // });
   
  
 }
@@ -725,6 +781,7 @@ function move() {
     i = 1;
     var elem = document.getElementById("slidecontainer");
     var width = 1;
+    // thss line adjusts the frames
     var id = setInterval(frame, 50);
     function frame() {
       if (width >= 100) {

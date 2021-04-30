@@ -490,10 +490,11 @@ table th {
   margin: auto;
 }
 
-#startday{
+#startday, #endday{
   display: flex;
   margin: auto;
 }
+
 /* .actualtable tr{
   padding: 10%;
 } */
@@ -501,7 +502,7 @@ table th {
   display: flex;
   justify-content: space-evenly;
 }
-#shour {
+#shour, #ehour {
   width: 40%;
   display: flex;
   margin: auto;

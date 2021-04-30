@@ -45,28 +45,31 @@
     <!-- NEW AND MODIFED TABLE -->
     <div class="qpage">
     <table class="actualtable">
+      <!-- <form id="main" method="post"> -->
       <tbody>
           <tr class="section1">
             <th>
               <h4 class="title is-4">Minimum Longitude</h4>
-              <input type="text" />
+              <input type="text" onfocus=this.value='' id="minlong"/>
             </th>
             <th>
               <h4 class="title is-4">Minimum Latitude</h4>
-              <input type="text" />
+              <input type="text" id="minlat"/>
             </th>
           </tr>
       
           <tr class="section2"> 
             <th>
               <h4 class="title is-4">Maximum Longitude</h4>
-              <input type="text" />
+              <input type="text" id="maxlong"/>
             </th>
             <th>
               <h4 class="title is-4">Maximum Latitude</h4>
-              <input type="text" />
+              <input type="text" id="maxlat"/>
             </th>
           </tr>
+
+
           <tr class="middle">
             <tr>
               <th class="section3">
@@ -84,7 +87,7 @@
                  <!-- <h6 class="title is-6">Start hour</h6> -->
                 <input
                   type="number"
-                  min="0"
+                  min="1"
                   max="24"
                   name="starthour"
                   id="shour"
@@ -93,6 +96,8 @@
           
               </th>
             </th>
+
+
             <th class="section4">
               <h2>End</h2>
               <h2>Date</h2>
@@ -101,7 +106,7 @@
                <input
                
                 type="date"
-                name="endday"
+                name="startday"
                 id="endday"
                  style="font-size: 14px"
                />
@@ -109,10 +114,10 @@
                <!-- <h6 class="title is-6">End hour</h6> -->
               <input
                 type="number"
-                min="0"
+                min="1"
                 max="24"
                 name="starthour"
-                id="shour"
+                id="ehour"
                 style="font-size: 14px"
               />
             </th>
@@ -151,291 +156,13 @@
             </td>
           </tr>            
         </th>
+        <!-- <div id="msg">
+          <pre></pre>
+      </div> -->
+      <!-- </form> -->
     </table>
     <div class="wrapper">
-
       <div id="map"></div>
-      <script>
-        function initMap(){
-         var options ={
-           zoom:4,
-           center: {lat:37.0902, lng:-95.7129},
-           styles: [
-              {
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#8ec3b9"
-                  }
-                ]
-              },
-              {
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1a3646"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.country",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#4b6878"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#64779e"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.province",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#4b6878"
-                  }
-                ]
-              },
-              {
-                "featureType": "landscape.man_made",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#334e87"
-                  }
-                ]
-              },
-              {
-                "featureType": "landscape.natural",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#283d6a"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#6f9ba5"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#3C7680"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#304a7d"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.icon",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#98a5be"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#2c6675"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#255763"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#b0d5ce"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#98a5be"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit.line",
-                "elementType": "geometry.fill",
-                "stylers": [
-                  {
-                    "color": "#283d6a"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#3a4762"
-                  }
-                ]
-              },
-              {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#0e1626"
-                  }
-                ]
-              },
-              {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#4e6d70"
-                  }
-                ]
-              }
-            ]
-            
-         }
-
-        var map = new google.maps.Map(
-          document.getElementById("map"),
-          options
-        );
-      }
-    </script>
     </div>
     <script
       async
@@ -444,7 +171,39 @@
         iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
     ></script>
   </div>
-    
+  
+  <!-- <script>
+    let data = [];
+    // example {id:1592304983049, title: 'Deadpool', year: 2015}
+    const addMovie = (ev)=>{
+        ev.preventDefault();  //to stop the form submitting
+        let userdata = {
+            // id: Date.now(),
+            minLong: document.getElementById('minlong').value,
+            minLat: document.getElementById('minlat').value,
+            maxLong: document.getElementById('maxlong').value,
+            maxLat: document.getElementById('maxlat').value,
+            email: document.getElementById('email').value
+
+            // title: document.getElementById('title').value,
+            // year: document.getElementById('yr').value
+        }
+        data.push(userdata);
+        document.forms[0].reset(); // to clear the form for the next entries
+        //document.querySelector('form').reset();
+
+        //for display purposes only
+        console.warn('added' , {data} );
+        let pre = document.querySelector('#msg pre');
+        pre.textContent = '\n' + JSON.stringify(data, '\t', 2);
+
+        //saving to localStorage
+        localStorage.setItem('MyMovieList', JSON.stringify(data) );
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.getElementById('btn').addEventListener('click', addMovie);
+    });
+</script> -->
 
 
     <!-- HTML portion for the table -->

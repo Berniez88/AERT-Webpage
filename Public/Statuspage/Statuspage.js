@@ -719,7 +719,10 @@ function initMap(){
         bounds.extend(place.geometry.location);
       }
     });
+    // plots the bounds
     map.fitBounds(bounds);
+    // controls how close to zoom in when the search bar is used
+    map.setZoom(9);
   });
   // var autocomplete = new google.maps.places.Autocomplete(input);
   // autocomplete.bindTo('bounds', maps);

@@ -464,6 +464,10 @@ h2 {
   justify-content: center;
   color: white;
 }
+
+#display{
+  color:white
+}
 .qpage{
   display: flex;
   flex-direction: row;

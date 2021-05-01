@@ -95,24 +95,89 @@
 //     map.fitBounds(bounds);
 //   }
 
+const minLong = [];
+const minLat = [];
+const maxLong = [];
+const maxLat = [];
 
 
+const startdate = [];
+const starthour = [];
+const endhour = [];
+const enddate = [];
+const email = [];
 
-function setDateAndHour() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
-  var day2 = date.getDate() - 2;
-  if (month < 10) month = "0" + month;
-  if (day < 10) day = "0" + day;
+const minimumlong = document.getElementById("minlong");
+const minimumlat = document.getElementById("minlat");
+const maximumlong = document.getElementById("maxlong");
+const maximumlat = document.getElementById("maxlat");
+const xemail = document.getElementById("email");
+const startingdate = document.getElementById("startday");
+const startinghour = document.getElementById("shour")
 
-  var endday = year + "-" + month + "-" + day;
-  var today = year + "-" + month + "-" + day;
-  var yesterday = year + "-" + month + "-" + day2;
-  document.getElementById('startday').value = today;
+const endingdate = document.getElementById("endday");
+const endinghour = document.getElementById("ehour");
+
+const messageBox  = document.getElementById("display");
+
+function insert () {
+  minLong.push(minimumlong.value);
+  minLat.push(minimumlat.value);
+  maxLong.push(maximumlong.value);
+  maxLat.push(maximumlat.value);
+  startdate.push(startingdate.value);
+  starthour.push(startinghour.value);
+  enddate.push(endinghour.value);
+  endhour.push(endingdate.value);
+  email.push(xemail.value)
+
+  display();
+}
+
+function display(){
+  minimumlong.value = "";
+  minimumlat.value = "";
+  maximumlong.value = "";
+  maximumlat.value = "";
+  startingdate.value = "";
+  startinghour.value = "";
+  endingdate.value = "";
+  endinghour.value = "";
+  xemail.value = "";
+
+    // Show our output
+    messageBox.innerHTML = "";
   
-  document.getElementById('endday').value = endday;
+    messageBox.innerHTML += "Minimum Longitude: " + minLong.join(", ") + "<br/>";
+    messageBox.innerHTML += "Minimum Latitude: " + minLat.join(", ") + "<br/>";
+    messageBox.innerHTML += "Maximum Longitude: " + maxLong.join(", ") + "<br/>";
+    messageBox.innerHTML += "Maximum Latitude: " + maxLong.join(", ") + "<br/>";
+    messageBox.innerHTML += "Starting Date: " + startdate.join(", ") + "<br/>";
+    messageBox.innerHTML += "Starting Hour: " + starthour.join(", ") + "<br/>";
+    messageBox.innerHTML += "Ending Date: " + enddate.join(", ") + "<br/>";
+    messageBox.innerHTML += "Ending Hour: " + endhour.join(", ") + "<br/>";
+    messageBox.innerHTML += "Email: " + email.join(", ");
+
+}
+function setDateAndHour() {
+  // var date = new Date();
+  // var day = date.getDate();
+  // var month = date.getMonth() + 1;
+  // var year = date.getFullYear();
+  // var day2 = date.getDate() - 2;
+  // if (month < 10) month = "0" + month;
+  // if (day < 10) day = "0" + day;
+
+  // var endday = year + "-" + month + "-" + day;
+  // var today = year + "-" + month + "-" + day;
+  // var yesterday = year + "-" + month + "-" + day2;
+  // document.getElementById('startday').value = today;
+  
+  // document.getElementById('endday').value = endday;
+
+  document.getElementById('startday').value = "";
+  document.getElementById('endday').value = "";
+
   document.getElementById('shour').value = 1;
   document.getElementById('ehour').value = 1;
 
@@ -403,3 +468,6 @@ function initMap(){
    options
  );
 }
+
+// controls the maps loading as the page is opened
+google.maps.event.addDomtListener(window, "load", initMap);

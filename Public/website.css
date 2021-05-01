@@ -182,6 +182,7 @@ body,html {
     display: flex;
     align-items: center;
     color: #FFFFFF;
+    
   }
   /* End of header bar CSS */
   
@@ -271,13 +272,16 @@ body,html {
     padding-left: 5mm;
     font-size: 20px;
     /* letter-spacing: 1mm; */
-    border-style: solid;
-    border-color: #25374B;
+    /* border-style: solid;
+    border-color: #25374B; */
     color: white;
     font-family: Roboto;
     font-style: normal;
-    border-width: 1px;
+    /* border-width: 1px; */
+    margin: 2px;
   }
+
+
   /* End */
   
   
@@ -386,12 +390,13 @@ body,html {
     padding-left: 5mm;
     font-size: 20px;
     /* letter-spacing: 1mm; */
-    border-style: solid;
-    border-color: #25374B;
+    /* border-style: solid;
+    border-color: #25374B; */
     color: white;
     font-family: Roboto;
     font-style: normal;
-    border-width: 1px;
+    /* border-width: 1px; */
+    margin: 2px;
   }
   /* end */
   

@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <title>Query Page</title>
   </head>
   <body>
@@ -148,7 +150,7 @@
         </tr>
           <tr class="bottomtable">
             <td>
-              <input type="submit" class="button" value="Submit" id="submit" name="submit">
+              <input type="submit" class="button" value="Submit" id="submit" name="submit" value="Save/Show" onclick="insert()">
               <br>
             </td>
             <td>
@@ -156,11 +158,16 @@
             </td>
           </tr>            
         </th>
+        <tr>
+          <div id="display"></div>
+        </tr>
         <!-- <div id="msg">
           <pre></pre>
       </div> -->
       <!-- </form> -->
     </table>
+
+
     <div class="wrapper">
       <div id="map"></div>
     </div>

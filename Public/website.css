@@ -1,6 +1,6 @@
 body,html {
     background-color: #234a61;
-    height: 100%;
+
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -420,15 +420,7 @@ body,html {
     bottom: 0px;
     width: 100%;
   }
-  .Qfooter{
-    background-color: #0e1316;
-    display: flex;
-    justify-content: center;
-    padding: 0mm;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-  }
+
 
   .wlogo {
     display: flex;
@@ -444,6 +436,8 @@ body,html {
 
   /* QUERY PAGE */
 
+
+/* This is the styling of the map size  */
 .mapheader,
 .mapheader h3 {
   justify-content: center;
@@ -454,7 +448,6 @@ body,html {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 #map {
   height: 900px;
   width: 70%;
@@ -470,13 +463,12 @@ h2 {
   color: white;
 }
 
-#display{
-  color:white
-}
 .qpage{
   display: flex;
   flex-direction: row;
 }
+
+/* Main css for the table body */
 .actualtable{
   /* width: 27%; */
   display: flex;
@@ -492,7 +484,7 @@ table th {
   color: #363636;
   padding: 20px;
 }
-
+/* Styling for the top half of the table */
 .section1 input, .section2 input {
   display: flex;
   justify-content: center;
@@ -504,13 +496,6 @@ table th {
   margin: auto;
 }
 
-/* .actualtable tr{
-  padding: 10%;
-} */
-.bottomtable {
-  display: flex;
-  justify-content: space-evenly;
-}
 #shour, #ehour {
   width: 40%;
   display: flex;
@@ -522,10 +507,17 @@ table th {
   margin: auto;
 }
 
+.bottomtable {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Styling for the icon above the email */
 .fa, .fas {
   font-weight: 900;
   color: white;
 }
+
+/* tooltip is the css for the icon with the information above the email input */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -569,6 +561,7 @@ table th {
   opacity: 1;
 }
 
+/* bulma styling for the labeling the table example: Minimum Longitude */
 .title.is-4 {
   font-size: 1.5rem;
   display: flex;
@@ -594,15 +587,37 @@ table th {
   background-color: #3d94c4;
 }
 
-
-/* end of query page css */
-
 .text{
   color: white;
 }
-/* .title{
-  color: #EA8A45;
-}*/
+
+/* Footer for the query page */
+.Qfooter{
+  /* display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0e1316;
+  justify-content: center;
+  padding: 0mm; */
+  /* background-color: #0e1316;
+  display: block;
+
+  justify-content: center;
+  padding: 0mm;
+   position: absolute; 
+  bottom: 0px;
+  width: 100%; */
+
+  background-color: #0e1316;
+  display: flex;
+  justify-content: center;
+  padding: 0mm;
+  /* position: absolute; */
+  bottom: 0px;
+  width: 100%;
+}
+/* end of query page css */
 .title.is-3 {
   font-size: 2rem;
   color: #ea8a45;

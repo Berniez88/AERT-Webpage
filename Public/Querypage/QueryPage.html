@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +20,7 @@
     <title>Query Page</title>
   </head>
   <body>
+
     <!-- Navigation bar with menu -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div id="navbarBasicExample" class="navbar-menu">
@@ -49,6 +49,7 @@
     <table class="actualtable">
       <!-- <form id="main" method="post"> -->
       <tbody>
+        <!-- This portion is the top half of the table regarding the Latitude and Longitude Data -->
           <tr class="section1">
             <th>
               <h4 class="title is-4">Minimum Longitude</h4>
@@ -71,14 +72,12 @@
             </th>
           </tr>
 
-
+          <!-- This portion is the middle of the table where we have the start and end date and hour -->
           <tr class="middle">
             <tr>
               <th class="section3">
                 <h2>Start</h2>
                 <h2>Date</h2>
-                <!-- <h6 class="title is-6">Start</h6>
-                <h6 class="title is-6">Date</h6> -->
                 <input
                    type="date"
                    name="startday"
@@ -86,7 +85,6 @@
                    style="font-size: 14px"
                  />
                  <h2>Start hour</h2>
-                 <!-- <h6 class="title is-6">Start hour</h6> -->
                 <input
                   maxlength="2"
                   type="number"
@@ -99,22 +97,16 @@
           
               </th>
             </th>
-
-
             <th class="section4">
               <h2>End</h2>
               <h2>Date</h2>
-              <!-- <h6 class="title is-6">End</h6>
-              <h6 class="title is-6">Date</h6> -->
                <input
-               
                 type="date"
                 name="startday"
                 id="endday"
                  style="font-size: 14px"
                />
                <h2>End hour</h2>
-               <!-- <h6 class="title is-6">End hour</h6> -->
               <input
                 maxlength="2"
                 type="number"
@@ -128,6 +120,7 @@
             </tr>
           </tr>
           <tr>
+            <!-- Email input along with buttons and icon information -->
           <th colspan="2">
             <h4 class="title is-4">Email</h4>
             <div class="tooltip">
@@ -169,10 +162,11 @@
       <!-- </form> -->
     </table>
 
-
+    <!-- These two divs will style the map along with generate the api for the map -->
     <div class="wrapper">
       <div id="map"></div>
     </div>
+    <!-- API KEY This will need to be changed once my license has expired -->
     <script
       async
       defer
@@ -180,119 +174,12 @@
         iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
     ></script>
   </div>
-  
-  <!-- <script>
-    let data = [];
-    // example {id:1592304983049, title: 'Deadpool', year: 2015}
-    const addMovie = (ev)=>{
-        ev.preventDefault();  //to stop the form submitting
-        let userdata = {
-            // id: Date.now(),
-            minLong: document.getElementById('minlong').value,
-            minLat: document.getElementById('minlat').value,
-            maxLong: document.getElementById('maxlong').value,
-            maxLat: document.getElementById('maxlat').value,
-            email: document.getElementById('email').value
-
-            // title: document.getElementById('title').value,
-            // year: document.getElementById('yr').value
-        }
-        data.push(userdata);
-        document.forms[0].reset(); // to clear the form for the next entries
-        //document.querySelector('form').reset();
-
-        //for display purposes only
-        console.warn('added' , {data} );
-        let pre = document.querySelector('#msg pre');
-        pre.textContent = '\n' + JSON.stringify(data, '\t', 2);
-
-        //saving to localStorage
-        localStorage.setItem('MyMovieList', JSON.stringify(data) );
-    }
-    document.addEventListener('DOMContentLoaded', ()=>{
-        document.getElementById('btn').addEventListener('click', addMovie);
-    });
-</script> -->
-
-
-    <!-- HTML portion for the table -->
-     <!-- <div id="wrap">
-    <table class="table">
-      <form id="main" method="post">
-        <tr>
-          <th>
-            <h2> Minimum Longitude </h2>
-            <input type="text" name="latmin" id="latmin" style="font-size:14px">
-          </th>
-          <th>
-            <h2> Minimum Latitude </h2>
-            <input type="text" name="latmax" id="latmax" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <h2> Maximum Longitude </h2>
-            <input type="text" name="lonmin" id="lonmin" style="font-size:14px">
-          </th>
-          <th>
-            <h2> Maximum Latitude </h2>
-            <input type="text" name="lonmax" id="lonmax" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <h2> Start Hour </h2>
-            <input type="number" min="0" max="24" name="starthour" id="shour" style="font-size:14px">
-          </th>
-          <th>
-            <h2> End Hour </h2>
-            <input type="number" min="0" max="24" name="endhour" id="ehour" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-        <td>
-          <h2> Satellite: </h2>
-        </td>
-          <th>
-            <input type="radio" id="g16" name="satellite" value="16" checked>
-          <label for="g16">GOES-16</label><br>
-            <input type="radio" id="g17" name="satellite" value="17">
-          <label for="g17">GOES-17</label><br>
-          </th>
-        </tr>
-        <th colspan="2">
-          <h2>Date</h2>
-          <input type="date" name="startday" id="startday" style="font-size:14px">
-        </th>
-        <tr>
-          <th colspan="2">
-            <h2> Email<br> </h2>
-            <div class="tooltip"><i class="fa fa-info-circle"></i>
-              <span class="tooltiptext">Enter in the latitude/longitude boundaries or select a region using the map, then choose the date and begin/end UTC hour, enter your email, and click submit. You will recieve an inital email acknowledging your request followed some time later by a summary image and link to a directory providing the GLM flash data in comma-delimited format.</span>
-            </div>
-            <input type="text" name="email" id="email" style="font-size:14px">
-          </th>
-        </tr>
-        <tr class="bottomtable">
-          <td>
-            <input type="submit" class="button" value="Submit" id="submit" name="submit">
-            <br>
-          </td>
-          <td>
-            <input type="reset" class="button" value="Reset" id="reset" name="reset" onclick="setDateAndHour()">
-          </td>
-        </tr>
-      </form>
-    </table>
-  </td>
-  <td>  -->
-
-    <!--The div element for the map -->
- 
+    <!-- This is the footer with the logo of CISESS -->
     <footer class="Qfooter">
       <img class="wlogo" src="/Public/CISESS_W 1.png" alt="Nav Logo" />
     </footer>
     <script src="https://kit.fontawesome.com/cf7c474051.js" crossorigin="anonymous"></script>
     <script src="/Public/Querypage/Query.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
   </body>
 </html>

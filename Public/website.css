@@ -478,7 +478,7 @@ h2 {
   flex-direction: row;
 }
 .actualtable{
-  width: 27%;
+  /* width: 27%; */
   display: flex;
   justify-content: center;
   background-color:rgba(14,22,38,255);

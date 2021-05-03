@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
-    <!-- <link rel="stylesheet" href="Status.css" /> -->
+    <!-- link to the css file -->
     <link rel="stylesheet" href="/Public/website.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
@@ -17,8 +17,11 @@
     <title>GLM Status Page</title>
   </head>
   <body>
-    <!-- Beginning of nav bar code -->
+
+    <!-- **Beginning of nav bar code** -->
+    <!-- the nav bar code uses bulma for styling -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
+      <!-- nav bar buttons with the links to the differnt pages -->
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="/Public/Homepage/index.html"> Home </a>
@@ -27,23 +30,24 @@
           <a class="navbar-item" href="/Public/Aboutpage/About.html">About</a>
         </div>
 
+        <!-- bulma to put the image at the end of the nav bar -->
         <div class="navbar-end">
+          <!-- Image for the nav bar -->
           <div class="navbar-item">
             <img class="wlogo" src="/Public/CISESS_W 1.png" alt="Nav Logo" />
           </div>
         </div>
       </div>
     </nav>
-    <!-- end of nav bar code -->
-    <!-- start of webpage header class -->
+    
+
+    <!-- **Start of webpage header class** -->
     <div class="header">
       <h1>GLM Instrument Status</h1>
     </div>
-    <div class="glm-nav bar">
-      <!-- end of webpage header class -->
-    </div>
+    
 
-    <!-- Place holder for the future buttons at the top -->
+    <!-- **Place holder for the future buttons under the webpage header** -->
     <div class="pagebuttons">
       <a href="button1">Button 1</a>
       <a href="button2">Button 2</a>
@@ -52,15 +56,17 @@
       <a href="button5">Button 5</a>
       <a href="button6">Button 6</a>
     </div>
-    <!-- end of firts set of page buttons -->
 
-    <!-- Wrapper that conatins all of the elements for the map and check boxes -->
+
+    <!-- **Wrapper that conatins all of the elements for the map and checkboxes** -->
     <div id="wrap">
-      <!-- Layer checkbox html -->
+      <!-- Layer checkbox code -->
       <div class="leftbox1">
+        <!-- layer checkbox header -->
         <div class="menu-label">
           <p>Layer</p>
         </div>
+        <!-- list of the basemap, ABI, GLM checkbox options -->
         <ul>
           <li>
             <input type="checkbox" name="option1" value="basemap" /> BASEMAP
@@ -70,6 +76,7 @@
             <input type="checkbox" id="option3" /><label for="option3">
               GLM</label
             >
+            <!-- list of the GLM sub-options -->
             <ul>
               <li>
                 <label> <input type="checkbox" class="subOption" /> FED </label>
@@ -86,37 +93,46 @@
         </ul>
       </div>
       
-      <!-- HTML with javascript for the map -->
+      <!-- code for the Layers map items -->
       <div class="mapcont">
+
+      <!-- container the GOES map buttons -->
       <div id="satcontainer">
         <div class="sat">
-          <!-- uses some bulma -->
+          <!-- buttons for GOES along with styling -->
+          <!-- class="button is-large" is bulma which was used to style the mouse hovering -->
           <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-17</button>
           <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-16</button>
         </div>
-      <!-- Dispaly geo location -->
+
+      <!-- Dispaly fro the geo location under the GOES buttons -->
       <ol class="geo-data">
         <li>Sector: <span id="location"></span></li>
         <li><span id="conus"></span></li>
         <li><span id="disk"></span></li>
         <li><span id="ocean"></span></li>
       </ol>
-      <!-- Search input -->
+
+      <!-- Search input addin for the map -->
       <input id="searchInput" class="controls" type="text" placeholder="Enter a location" style="width: 30%;">
-        <!--Google Maps -->
+      
+      <!-- Google Maps div -->
       <div id="mapone"></div>
 
+      <!-- here is where you will replace the src link with your google maps api link -->
       <script
         async
         defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_niGAb0EeRARjwxoc0
           iVi9zepurq7xIc&callback=initMap&libraries=places&keys"
       ></script>
-      <!-- map slider and play button code -->
+
+      <!-- map slider -->
       <div id="myProgress">
         <input id = "slidecontainer" type="range" min="1" max="100" value="100">
       </div>
       
+      <!-- map slider play button -->
       <button id= "playbutton" onclick="move()">Play</button>
 
 
@@ -125,16 +141,18 @@
     </div>
     </div>
 
-     <!-- Satilite buttons for time series table -->
+     
     
     
-    <!-- containes both the parameter checkbox and time series table -->
+    <!-- **containes both the parameter checkbox and time series table** -->
     <div class="instrument_status">
-      <!-- Pararmeter checkbox -->
+      <!-- Pararmeter checkbox div -->
       <div class="leftbox2">
+        <!-- parameter checkbox header -->
         <div class="menu-label">
           <p>Parameter</p>
         </div>
+        <!-- checkboxes for Energy, Area, Errors, and House Keeping -->
         <ul>
           <li>
             <input type="checkbox" name="option1" value="energy" /> Energy
@@ -150,18 +168,21 @@
         </ul>
       </div>
 
+      <!-- container for the time series buttons and display -->
       <div class="timecont">
-      <div id="satcontainertwo">
-        <!-- <div class="emptyplaceholdertwo"></div> -->
-        <div class="sattwo">
-          <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-17</button>
-          <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-16</button>
+        <div id="satcontainertwo">
+          <!-- container for the two time series GOES buttons -->
+          <div class="sattwo">
+            <!-- buttons for GOES along with styling -->
+            <!-- class="button is-large" is bulma which was used to style the mouse hovering -->
+            <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-17</button>
+            <button class="button is-large" type="button" style="width:50%; background-color: #3d94c4; border-radius: 4px; border-color: #25374B; color: white;">GOES-16</button>
+          </div>
+          <!-- Time series table -->
+          <div class="time-series-box">
+            <table id="datatable"></table>
+          </div>
         </div>
-        <!-- Time series table  -->
-        <div class="time-series-box">
-          <table id="datatable"></table>
-        </div>
-      </div>
       </div>
       
       

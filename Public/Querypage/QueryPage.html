@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,16 +8,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
-    <!-- <link rel="stylesheet" href="Query.css" /> -->
     <link rel="stylesheet" href="/Public/website.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <!-- google font linking -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <title>Query Page</title>
   </head>
   <body>
+
     <!-- Navigation bar with menu -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div id="navbarBasicExample" class="navbar-menu">
@@ -45,35 +48,37 @@
     <!-- NEW AND MODIFED TABLE -->
     <div class="qpage">
     <table class="actualtable">
+      <!-- <form id="main" method="post"> -->
       <tbody>
+        <!-- This portion is the top half of the table regarding the Latitude and Longitude Data -->
           <tr class="section1">
             <th>
               <h4 class="title is-4">Minimum Longitude</h4>
-              <input type="text" />
+              <input type="text" onfocus=this.value='' id="minlong"/>
             </th>
             <th>
               <h4 class="title is-4">Minimum Latitude</h4>
-              <input type="text" />
+              <input type="text" id="minlat"/>
             </th>
           </tr>
       
           <tr class="section2"> 
             <th>
               <h4 class="title is-4">Maximum Longitude</h4>
-              <input type="text" />
+              <input type="text" id="maxlong"/>
             </th>
             <th>
               <h4 class="title is-4">Maximum Latitude</h4>
-              <input type="text" />
+              <input type="text" id="maxlat"/>
             </th>
           </tr>
+
+          <!-- This portion is the middle of the table where we have the start and end date and hour -->
           <tr class="middle">
             <tr>
               <th class="section3">
                 <h2>Start</h2>
                 <h2>Date</h2>
-                <!-- <h6 class="title is-6">Start</h6>
-                <h6 class="title is-6">Date</h6> -->
                 <input
                    type="date"
                    name="startday"
@@ -81,10 +86,10 @@
                    style="font-size: 14px"
                  />
                  <h2>Start hour</h2>
-                 <!-- <h6 class="title is-6">Start hour</h6> -->
                 <input
+                  maxlength="2"
                   type="number"
-                  min="0"
+                  min="1"
                   max="24"
                   name="starthour"
                   id="shour"
@@ -96,29 +101,27 @@
             <th class="section4">
               <h2>End</h2>
               <h2>Date</h2>
-              <!-- <h6 class="title is-6">End</h6>
-              <h6 class="title is-6">Date</h6> -->
                <input
-               
                 type="date"
-                name="endday"
+                name="startday"
                 id="endday"
                  style="font-size: 14px"
                />
                <h2>End hour</h2>
-               <!-- <h6 class="title is-6">End hour</h6> -->
               <input
+                maxlength="2"
                 type="number"
-                min="0"
+                min="1"
                 max="24"
                 name="starthour"
-                id="shour"
+                id="ehour"
                 style="font-size: 14px"
               />
             </th>
             </tr>
           </tr>
           <tr>
+            <!-- Email input along with buttons and icon information -->
           <th colspan="2">
             <h4 class="title is-4">Email</h4>
             <div class="tooltip">
@@ -143,7 +146,7 @@
         </tr>
           <tr class="bottomtable">
             <td>
-              <input type="submit" class="button" value="Submit" id="submit" name="submit">
+              <input type="submit" class="button" value="Submit" id="submit" name="submit" value="Save/Show" onclick="insert()">
               <br>
             </td>
             <td>
@@ -151,292 +154,21 @@
             </td>
           </tr>            
         </th>
+        <!-- This div is meant to display the user inputs -->
+        <tr>
+          <div id="display"></div>
+        </tr>
+        <!-- <div id="msg">
+          <pre></pre>
+      </div> -->
+      <!-- </form> -->
     </table>
+
+    <!-- These two divs will style the map along with generate the api for the map -->
     <div class="wrapper">
-
       <div id="map"></div>
-      <script>
-        function initMap(){
-         var options ={
-           zoom:4,
-           center: {lat:37.0902, lng:-95.7129},
-           styles: [
-              {
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#8ec3b9"
-                  }
-                ]
-              },
-              {
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1a3646"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.country",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#4b6878"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#64779e"
-                  }
-                ]
-              },
-              {
-                "featureType": "administrative.province",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#4b6878"
-                  }
-                ]
-              },
-              {
-                "featureType": "landscape.man_made",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#334e87"
-                  }
-                ]
-              },
-              {
-                "featureType": "landscape.natural",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#283d6a"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#6f9ba5"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#3C7680"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#304a7d"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.icon",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#98a5be"
-                  }
-                ]
-              },
-              {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#2c6675"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                  {
-                    "color": "#255763"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#b0d5ce"
-                  }
-                ]
-              },
-              {
-                "featureType": "road.highway",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#023e58"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "stylers": [
-                  {
-                    "visibility": "off"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#98a5be"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                  {
-                    "color": "#1d2c4d"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit.line",
-                "elementType": "geometry.fill",
-                "stylers": [
-                  {
-                    "color": "#283d6a"
-                  }
-                ]
-              },
-              {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#3a4762"
-                  }
-                ]
-              },
-              {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                  {
-                    "color": "#0e1626"
-                  }
-                ]
-              },
-              {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                  {
-                    "color": "#4e6d70"
-                  }
-                ]
-              }
-            ]
-            
-         }
-
-        var map = new google.maps.Map(
-          document.getElementById("map"),
-          options
-        );
-      }
-    </script>
     </div>
+    <!-- API KEY This will need to be changed once my license has expired -->
     <script
       async
       defer
@@ -444,87 +176,12 @@
         iVi9zepurq7xIc&callback=initMap&libraries=&v=weekly"
     ></script>
   </div>
-    
-
-
-    <!-- HTML portion for the table -->
-     <!-- <div id="wrap">
-    <table class="table">
-      <form id="main" method="post">
-        <tr>
-          <th>
-            <h2> Minimum Longitude </h2>
-            <input type="text" name="latmin" id="latmin" style="font-size:14px">
-          </th>
-          <th>
-            <h2> Minimum Latitude </h2>
-            <input type="text" name="latmax" id="latmax" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <h2> Maximum Longitude </h2>
-            <input type="text" name="lonmin" id="lonmin" style="font-size:14px">
-          </th>
-          <th>
-            <h2> Maximum Latitude </h2>
-            <input type="text" name="lonmax" id="lonmax" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <h2> Start Hour </h2>
-            <input type="number" min="0" max="24" name="starthour" id="shour" style="font-size:14px">
-          </th>
-          <th>
-            <h2> End Hour </h2>
-            <input type="number" min="0" max="24" name="endhour" id="ehour" style="font-size:14px">
-          </th>
-        </tr>
-        <tr>
-        <td>
-          <h2> Satellite: </h2>
-        </td>
-          <th>
-            <input type="radio" id="g16" name="satellite" value="16" checked>
-          <label for="g16">GOES-16</label><br>
-            <input type="radio" id="g17" name="satellite" value="17">
-          <label for="g17">GOES-17</label><br>
-          </th>
-        </tr>
-        <th colspan="2">
-          <h2>Date</h2>
-          <input type="date" name="startday" id="startday" style="font-size:14px">
-        </th>
-        <tr>
-          <th colspan="2">
-            <h2> Email<br> </h2>
-            <div class="tooltip"><i class="fa fa-info-circle"></i>
-              <span class="tooltiptext">Enter in the latitude/longitude boundaries or select a region using the map, then choose the date and begin/end UTC hour, enter your email, and click submit. You will recieve an inital email acknowledging your request followed some time later by a summary image and link to a directory providing the GLM flash data in comma-delimited format.</span>
-            </div>
-            <input type="text" name="email" id="email" style="font-size:14px">
-          </th>
-        </tr>
-        <tr class="bottomtable">
-          <td>
-            <input type="submit" class="button" value="Submit" id="submit" name="submit">
-            <br>
-          </td>
-          <td>
-            <input type="reset" class="button" value="Reset" id="reset" name="reset" onclick="setDateAndHour()">
-          </td>
-        </tr>
-      </form>
-    </table>
-  </td>
-  <td>  -->
-
-    <!--The div element for the map -->
- 
+    <!-- This is the footer with the logo of CISESS -->
     <footer class="Qfooter">
       <img class="wlogo" src="/Public/CISESS_W 1.png" alt="Nav Logo" />
     </footer>
     <script src="https://kit.fontawesome.com/cf7c474051.js" crossorigin="anonymous"></script>
     <script src="/Public/Querypage/Query.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
   </body>
 </html>

@@ -146,17 +146,17 @@ function display(){
   xemail.value = "";
 
     // Show our output
-    messageBox.innerHTML = "";
+    // messageBox.innerHTML = "";
   
-    messageBox.innerHTML += "Minimum Longitude: " + minLong.join(", ") + "<br/>";
-    messageBox.innerHTML += "Minimum Latitude: " + minLat.join(", ") + "<br/>";
-    messageBox.innerHTML += "Maximum Longitude: " + maxLong.join(", ") + "<br/>";
-    messageBox.innerHTML += "Maximum Latitude: " + maxLong.join(", ") + "<br/>";
-    messageBox.innerHTML += "Starting Date: " + startdate.join(", ") + "<br/>";
-    messageBox.innerHTML += "Starting Hour: " + starthour.join(", ") + "<br/>";
-    messageBox.innerHTML += "Ending Date: " + enddate.join(", ") + "<br/>";
-    messageBox.innerHTML += "Ending Hour: " + endhour.join(", ") + "<br/>";
-    messageBox.innerHTML += "Email: " + email.join(", ");
+    // messageBox.innerHTML += "Minimum Longitude: " + minLong.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Minimum Latitude: " + minLat.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Maximum Longitude: " + maxLong.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Maximum Latitude: " + maxLong.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Starting Date: " + startdate.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Starting Hour: " + starthour.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Ending Date: " + enddate.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Ending Hour: " + endhour.join(", ") + "<br/>";
+    // messageBox.innerHTML += "Email: " + email.join(", ");
 
 }
 function setDateAndHour() {

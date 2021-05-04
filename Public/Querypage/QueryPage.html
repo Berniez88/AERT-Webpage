@@ -19,6 +19,15 @@
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <title>Query Page</title>
+    <script>
+      function validateInt(){
+        var result = document.forms["main"]["starthour"].value;
+        if (result != "24") {
+          alert("Value must be less than 25");
+          return false;
+        }
+      }
+    </script>
   </head>
   <body>
 
@@ -48,7 +57,7 @@
     <!-- NEW AND MODIFED TABLE -->
     <div class="qpage">
     <table class="actualtable">
-      <!-- <form id="main" method="post"> -->
+      <form name="main" onsubmit="return validateInt()" method="post">
       <tbody>
         <!-- This portion is the top half of the table regarding the Latitude and Longitude Data -->
           <tr class="section1">
@@ -161,7 +170,7 @@
         <!-- <div id="msg">
           <pre></pre>
       </div> -->
-      <!-- </form> -->
+      </form>
     </table>
 
     <!-- These two divs will style the map along with generate the api for the map -->

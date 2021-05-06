@@ -104,7 +104,51 @@ text-align: center;
     margin-right: -28;
     text-align: center;
   
-  }  */
+  } 
+  
+  .pseudo-footer {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .pseudo-footer > h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  .pseudo-footer > div {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-top: 1em;
+    column-gap: 3em;
+  }
+
+  .pseudo-footer > div > section {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+  }
+
+  .pseudo-footer > div > section > a:link,
+  .pseudo-footer > div > section > a:visited {
+    color: white;
+  }
+
+  .pseudo-footer svg.twitter path {
+    fill: #55acee;
+  }
+
+  .pseudo-footer svg.youtube path {
+    fill: #e52d27; 
+  }
+
+  .pseudo-footer img {
+    width: 50px;
+    height: auto;
+
+  }
 
   /* STATUS PAGE */
   /* Header bar CSS */

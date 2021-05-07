@@ -190,7 +190,7 @@ text-align: center;
   font-style: normal;
   border-width: 1px;
 }
-   h1 {
+   /* h1 {
     display: flex;
     justify-content: center;
     font-family: Roboto;
@@ -203,7 +203,7 @@ text-align: center;
       rgba(3, 210, 255, 0.58) 0%,
       rgba(19, 29, 39, 0.27) 100%
     );
-  } */
+  }  */
   /* End of header bar css */
   
   /* Navigation bar CSS */
@@ -288,14 +288,7 @@ text-align: center;
     /* display: flex; */
     justify-content: center;
   }
-  /* .emptyplaceholder{
-    margin-top: 33px;
-    width: 30%;
-    background-color: #4a6a8f;
-    justify-content: center;
-    margin-bottom: auto;
-    max-width: 313px;
-  } */
+
   .sat {
     /* margin-left: 20px; */
     width: 100%;
@@ -350,10 +343,7 @@ text-align: center;
   /* CSS for the map */
   #mapone {
     height: 560px;
-    /* height: 600px */
     width: 100%;
-    /* margin-left: 20px; */
-    
     flex-wrap: wrap;
   }
 
@@ -656,22 +646,6 @@ table th {
 
 /* Footer for the query page */
 .Qfooter{
-  /* display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #0e1316;
-  justify-content: center;
-  padding: 0mm; */
-  /* background-color: #0e1316;
-  display: block;
-
-  justify-content: center;
-  padding: 0mm;
-   position: absolute; 
-  bottom: 0px;
-  width: 100%; */
-
   background-color: #0e1316;
   display: flex;
   justify-content: center;

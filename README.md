@@ -12,4 +12,7 @@ Blog folder: contains the blog page html file
 Downloads folder: contains the hompage trainning pdf files
 Homepage folder: contains the index.html file which is the html code of the homepage
 images folder: contains the homepage images
-Querypage folder: 
+Querypage folder: contains the javacript and html files for the query page
+Statuspage folder: contains the html and javascript files files for the status page
+images for the all of the pages
+website.css file: css styling for all of the pages

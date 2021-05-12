@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/58304673/112229708-d91bbc80-8c09-11eb-8701-00aff7b28bdc.png)
 
-## User guide
+# User guide
 * Aboutpage folder: contains about page html file and image
 * Blog folder: contains the blog page html file
 Downloads folder: contains the hompage trainning pdf files
@@ -13,11 +13,11 @@ Statuspage folder: contains the html and javascript files files for the status p
 images for the all of the pages
 website.css file: css styling for all of the pages
 
-## Home Page
+# Home Page
 
-## Status Page
+# Status Page
 
-## Query Page
+# Query Page
 ### Description
 The main purpose of the Query Page is to take the user input of the minimum and maximum coordinates and plot those points on the map. The user will then be able to get a better visualization of where they want the lightning data to be displayed. The user will also need to input a start and end date along with a start and end hour so the backend servers will be able to retrieve that targeted lighting data and send it to the user via email.
 ## Reading in netCDF4 Files

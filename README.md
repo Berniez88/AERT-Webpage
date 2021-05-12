@@ -18,7 +18,8 @@ website.css file: css styling for all of the pages
 ## Status Page
 
 ## Query Page
-
+### Description
+The main purpose of the Query Page is to take the user input of the minimum and maximum coordinates and plot those points on the map. The user will then be able to get a better visualization of where they want the lightning data to be displayed. The user will also need to input a start and end date along with a start and end hour so the backend servers will be able to retrieve that targeted lighting data and send it to the user via email.
 ## Reading in netCDF4 Files
 !. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
 

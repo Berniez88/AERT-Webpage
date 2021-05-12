@@ -43,7 +43,11 @@ This page was requested from the client as a space holder for any future project
 * NetCDF4
 
 # Reading in netCDF4 Files
-!. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
+NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
+
+* Steps to install Anaconda Packages ( Anaconda has pre-downloaded packages that allow users to use certain functions such as reading in netCDF4 files and much more)
+First go to Environments > base(root) 
+![e1f8a348ac7b72fef633b47124266637](https://user-images.githubusercontent.com/58304673/118041415-c3409300-b340-11eb-95fd-25cc57fa236b.png)
 
 
 

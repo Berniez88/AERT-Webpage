@@ -24,6 +24,24 @@ The main purpose of the status page is to allow the users to view lightning data
 
 The main purpose of the Query Page is to take the user input of the minimum and maximum coordinates and plot those points on the map. The user will then be able to get a better visualization of where they want the lightning data to be displayed. The user will also need to input a start and end date along with a start and end hour so the backend servers will be able to retrieve that targeted lighting data and send it to the user via email.
 
+# About Page
+
+This page contains information regarding what AERT is as a whole along with an image of the team itself
+
+# Blog Page
+
+This page was requested from the client as a space holder for any future projects and descriptions that AERT wanted to incporate.
+
+# Software Requirements and Libraries
+1. https://code.visualstudio.com/
+2. https://desktop.github.com/
+3. https://www.anaconda.com/
+## Anaconda Packages to install
+* Cartopy
+* Xarray
+* Imageio
+* NetCDF4
+
 # Reading in netCDF4 Files
 !. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
 

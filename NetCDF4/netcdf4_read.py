@@ -10,10 +10,10 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 import netCDF4 as nc
-fn = r"C:\Users\Bernie\Desktop\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc"
+fn = r"C:\Users\Israel\Desktop\INST 490\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc"
 ds = nc.Dataset(fn)
 
-my_example_nc_file = r"C:\Users\Bernie\Desktop\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850910178_e20210850919497_c20210850919565.nc"
+my_example_nc_file = r"C:\Users\Israel\Desktop\INST 490\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc"
 fh = nc.Dataset(my_example_nc_file, mode='r')
 
 
@@ -130,7 +130,7 @@ def MP4Maker(out_dir, name, num, fps,
 
 if __name__ == "__main__":
 
-    filename = r"C:\Users\Bernie\Desktop\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc"  # netCDF filename
+    filename = r"C:\Users\Israel\Desktop\INST 490\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc"  # netCDF filename
 
     lon, lat, data, data_units, data_time_grab, data_long_name = lat_lon_reproj(
         filename, varName='Rad')
@@ -159,7 +159,7 @@ import metpy  # noqa: F401
 # FILE = ('http://ramadda-jetstream.unidata.ucar.edu/repository/opendap'
 #         '/4ef52e10-a7da-4405-bff4-e48f68bb6ba2/entry.das#fillmismatch')
 
-FILE = (r"C:\Users\Bernie\Desktop\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc")
+FILE = (r"C:\Users\Israel\Desktop\INST 490\share\share\map data\abi_nc\OR_ABI-L1b-RadF-M6C13_G16_s20210850900178_e20210850909497_c20210850909557.nc")
 C = xarray.open_dataset(FILE)
 
 ######################################################################

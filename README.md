@@ -30,6 +30,15 @@ This page contains information regarding what AERT is as a whole along with an i
 
 This page was requested from the client as a space holder for any future projects and descriptions that AERT wanted to incporate.
 
+# Software Requirements and Libraries
+1. https://code.visualstudio.com/
+2. https://desktop.github.com/
+3. https://www.anaconda.com/
+Anaconda Packages to install
+* Cartopy
+* Xarray
+* Imageio
+* NetCDF4
 # Reading in netCDF4 Files
 !. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
 

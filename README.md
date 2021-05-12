@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/58304673/112229708-d91bbc80-8c09-11eb-8701-00aff7b28bdc.png)
 
 ## User guide
-Aboutpage folder: contains about page html file and image
+* Aboutpage folder: contains about page html file and image
 Blog folder: contains the blog page html file
 Downloads folder: contains the hompage trainning pdf files
 Homepage folder: contains the index.html file which is the html code of the homepage

@@ -2,11 +2,11 @@
 
 ![image](https://user-images.githubusercontent.com/58304673/112229708-d91bbc80-8c09-11eb-8701-00aff7b28bdc.png)
 
-# Home Page
+## Home Page
 
-# Status Page
+## Status Page
 
-# Query Page
+## Query Page
 
 # Reading in netCDF4 Files
 !. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time

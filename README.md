@@ -45,20 +45,33 @@ This page was requested from the client as a space holder for any future project
 # Reading in netCDF4 Files
 NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
 
-* Steps to install Anaconda Packages ( Anaconda has pre-downloaded packages that allow users to use certain functions such as reading in netCDF4 files and much more)
+1. Steps to install Anaconda Packages ( Anaconda has pre-downloaded packages that allow users to use certain functions such as reading in netCDF4 files and much more)
 First go to Environments > base(root) 
 ![e1f8a348ac7b72fef633b47124266637](https://user-images.githubusercontent.com/58304673/118041415-c3409300-b340-11eb-95fd-25cc57fa236b.png)
 
-* At the top of the list of packages change “Installed” to “All”
+2. At the top of the list of packages change “Installed” to “All”
 ![70efe222447eb77d08b363c89ee213fb](https://user-images.githubusercontent.com/58304673/118041569-f5ea8b80-b340-11eb-962b-eb8e62f21c3d.png)
 
-* Then search and install the following packages by clicking apply
+3. Then search and install the following packages by clicking apply
 (This process may take up to 10 minutes depending on the amount of packages that are already installed. If packages can not be found press the “Update index” and try the search again)
-** Cartopy
-** Xarray
-** Imageio
-** Netcdf4
 
+* Cartopy
+* Xarray
+* Imageio
+* Netcdf4
+
+![a54d6468e0ab7347bd3ea2384a469705](https://user-images.githubusercontent.com/58304673/118041769-36e2a000-b341-11eb-91f9-6fd45c472f56.png)
+
+5. Once all packages have found, then click “Apply” 
+
+![2511393fdd9048b53b26ad1420bf9e4c](https://user-images.githubusercontent.com/58304673/118041940-6f827980-b341-11eb-9f30-87e778a67241.png)
+
+6. Next, open the terminal from base(root) 
+
+![a5e459af4f2cb1e979eb25813b77a4b7](https://user-images.githubusercontent.com/58304673/118042033-8de87500-b341-11eb-966a-ae11ac223eb7.png)
+
+7. From the environment terminal enter the following code to install Metpy 
+* Code to install package in terminal: Pip install metpy
 
 
 

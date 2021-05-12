@@ -43,7 +43,22 @@ This page was requested from the client as a space holder for any future project
 * NetCDF4
 
 # Reading in netCDF4 Files
-!. NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
+NetCDF4 folder contains the netcdf4_read.py file. The file conatins the python code that runs one NC file at a time
+
+* Steps to install Anaconda Packages ( Anaconda has pre-downloaded packages that allow users to use certain functions such as reading in netCDF4 files and much more)
+First go to Environments > base(root) 
+![e1f8a348ac7b72fef633b47124266637](https://user-images.githubusercontent.com/58304673/118041415-c3409300-b340-11eb-95fd-25cc57fa236b.png)
+
+* At the top of the list of packages change “Installed” to “All”
+![70efe222447eb77d08b363c89ee213fb](https://user-images.githubusercontent.com/58304673/118041569-f5ea8b80-b340-11eb-962b-eb8e62f21c3d.png)
+
+* Then search and install the following packages by clicking apply
+(This process may take up to 10 minutes depending on the amount of packages that are already installed. If packages can not be found press the “Update index” and try the search again)
+** Cartopy
+** Xarray
+** Imageio
+** Netcdf4
+
 
 
 

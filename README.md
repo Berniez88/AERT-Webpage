@@ -4,7 +4,7 @@
 
 ## User guide
 * Aboutpage folder: contains about page html file and image
-Blog folder: contains the blog page html file
+* Blog folder: contains the blog page html file
 Downloads folder: contains the hompage trainning pdf files
 Homepage folder: contains the index.html file which is the html code of the homepage
 images folder: contains the homepage images
